@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Migration vers Google Cloud Spanner</title>
+  <link rel="stylesheet" type="text/css" href="article.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <button class="btn-back" onclick="goBack()">Retour</button>
+  <div class="container">
+        <img src="imgb/CloudSpan.webp" alt="Illustration de l'article">
+    <h1>Migration vers Google Cloud Spanner</h1>
+    <p>
+        Lors de mon stage en tant qu'étudiante en informatique, j'ai été impliquée dans un projet de migration de la base de données de l'entreprise, passant de SQL Anywhere à Google Cloud Spanner. Cette transition technique a été une occasion de relever des défis stimulants et de découvrir les avantages de cette technologie de pointe.
+        <br /> <br />
+      
+     
+        La migration vers Google Cloud Spanner s'est avérée être une décision stratégique pour notre entreprise. Cette base de données distribuée horizontalement offre une évolutivité exceptionnelle, permettant de gérer efficacement les charges de travail en constante croissance.
+        <br /> <br />
+      
+     
+        L'un des principaux défis auxquels nous avons été confrontés était d'adapter nos requêtes SQL existantes pour qu'elles fonctionnent de manière optimale avec Google Cloud Spanner. La syntaxe SQL de cette base de données diffère de celle de SQL Anywhere, nécessitant une réécriture méticuleuse des requêtes pour tirer parti de la puissance de Spanner. De plus, la documentation sur Google Cloud Spanner étant encore limitée, nous avons dû faire preuve d'une grande persévérance et d'expérimentations pour surmonter les problèmes techniques.
+        <br /> <br />
+     
+        Un autre point sensible était la sensibilité à la casse dans Google Cloud Spanner. Contrairement à SQL Anywhere, où les requêtes sont insensibles à la casse, nous avons dû être extrêmement attentifs à la façon dont nous utilisions la casse dans nos requêtes, car cela pouvait avoir un impact sur les résultats renvoyés.
+        <br /> <br />
+      
+      
+        Malgré ces défis, cette migration nous a offert des avantages considérables. Google Cloud Spanner offre une latence faible, une disponibilité élevée et une réplication mondiale, ce qui améliore considérablement la performance et la fiabilité de notre système. De plus, la flexibilité de cette base de données nous permet d'ajuster facilement la capacité en fonction des besoins, ce qui se traduit par une utilisation plus efficace des ressources.
+        <br /> <br />
+     
+        En conclusion, la migration vers Google Cloud Spanner a été une expérience technique passionnante. Cela nous a permis de mieux comprendre les différences entre les bases de données traditionnelles et distribuées, ainsi que d'explorer les opportunités offertes par cette technologie évolutive. Malgré les défis liés au manque de documentation et à la sensibilité à la casse, nous sommes convaincus que cette décision stratégique renforcera notre entreprise pour l'avenir et nous permettra de relever de nouveaux défis avec succès.
+      </p>
+      
+    <div class="article-footer">
+        <p class="article-date">Date de publication : 13 juillet 2023</p>
+        <p class="article-signature">Par Perin Léa</p>
+      </div>
+  </div>
+ 
+
+  <footer>
+    <div class="container-p">
+      <p>© 2023 Perin Léa. Tous droits réservés.</p>
+    </div>
+  </footer>
+  
+
+  <script>
+    function goBack() {
+        const redirectURL = new URL('../blog.html', window.location.href);
+      window.location.href = redirectURL.href;
+    }
+  </script>
+  <script>
+    function goBack() {
+      const redirectURL = new URL('../blog.html', window.location.href);
+      window.location.href = redirectURL.href;
+    }
+
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+
+    // Fonction pour activer/désactiver le mode sombre
+    function toggleDarkMode() {
+      if (body.classList.contains('dark-mode')) {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('dark-mode', 'disabled');
+        darkModeToggle.querySelector('.text-dark-mode').style.display = 'inline';
+        darkModeToggle.querySelector('.text-light-mode').style.display = 'none';
+      } else {
+        body.classList.add('dark-mode');
+        localStorage.setItem('dark-mode', 'enabled');
+        darkModeToggle.querySelector('.text-dark-mode').style.display = 'none';
+        darkModeToggle.querySelector('.text-light-mode').style.display = 'inline';
+      }
+    }
+
+    // Mettre à jour le texte du bouton en fonction de l'état du mode sombre lors du chargement de la page
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+      body.classList.add('dark-mode');
+      darkModeToggle.querySelector('.text-dark-mode').style.display = 'none';
+      darkModeToggle.querySelector('.text-light-mode').style.display = 'inline';
+    } else {
+      body.classList.remove('dark-mode');
+      darkModeToggle.querySelector('.text-dark-mode').style.display = 'inline';
+      darkModeToggle.querySelector('.text-light-mode').style.display = 'none';
+    }
+
+    // Écouter le clic sur le bouton pour activer/désactiver le mode sombre
+    darkModeToggle.addEventListener('click', toggleDarkMode);
+  </script>
+  </body>
+</html>

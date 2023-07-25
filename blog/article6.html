@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Changement d'adresse ip d'un VPN</title>
+  <link rel="stylesheet" type="text/css" href="article.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <button class="btn-back" onclick="goBack()">Retour</button>
+  <div class="container">
+        <img src="imgb/vpn.png" alt="Illustration de l'article">
+    <h1>Changement d'adresse ip d'un VPN</h1>
+    <p>
+        <em>Introduction</em>
+        <br /> <br />
+      
+        Au cœur du monde moderne de l'informatique, la connectivité et la sécurité sont deux aspects essentiels pour les entreprises internationales. L'une des méthodes les plus couramment utilisées pour relier des bureaux situés dans différents pays est l'utilisation d'un réseau privé virtuel (VPN). Un VPN permet de créer un lien sécurisé entre deux emplacements distants, offrant ainsi une communication fiable et cryptée. Dans le cadre de mon stage en informatique au sein d'une entreprise, j'ai eu l'opportunité d'observer le processus de changement d'adresse IP d'un VPN entre le siège social en France et une autre filiale située dans un pays étranger. Cet article explore les tenants et les aboutissants de cette pratique, mettant en évidence son rôle crucial dans le monde de l'infrastructure d'entreprise.
+        <br /> <br />
+
+        <em>Qu'est-ce qu'un VPN et son importance ?</em>
+        <br /> <br />
+
+        Un réseau privé virtuel (VPN) est un mécanisme permettant de créer un tunnel sécurisé au sein d'un réseau public, tel qu'Internet. Il assure une communication chiffrée entre deux sites distants, comme s'ils étaient directement connectés en réseau local. Les entreprises utilisent des VPN pour des raisons de confidentialité, de sécurité et de performance. Cela permet aux employés d'accéder aux ressources de l'entreprise de manière sécurisée, même lorsqu'ils se trouvent en déplacement ou dans des bureaux éloignés.
+        <br /> <br />
+
+        <em>Contexte de l'entreprise et nécessité de changer d'adresse IP</em>
+        <br /> <br />
+
+        Dans un contexte international, les entreprises ont souvent des filiales ou des bureaux situés dans différents pays. Pour assurer une interconnexion fiable, un VPN est établi entre ces emplacements distants. Cependant, des raisons opérationnelles, de sécurité ou de conformité peuvent nécessiter un changement d'adresse IP pour le VPN existant. C'est exactement ce que j'ai pu observer au cours de mon stage.
+        <br /> <br />
+
+        <em>Le processus de changement d'adresse IP d'un VPN</em>
+        <br /> <br />
+
+        1. Planification et coordination : Avant de commencer le processus, une planification minutieuse est essentielle. Les équipes responsables de l'infrastructure informatique en France et dans l'autre pays doivent collaborer pour s'assurer que le changement se déroulera sans heurts. Une fenêtre de maintenance est convenue pour minimiser les perturbations potentielles.
+        <br />
+        2. Configuration des dispositifs VPN : Les équipements VPN de chaque emplacement doivent être configurés pour reconnaître la nouvelle adresse IP du partenaire distant. Cela implique généralement la modification des paramètres de tunnel et des clés de chiffrement.
+        <br />
+        3. Changement en temps réel : Pendant la fenêtre de maintenance convenue, le changement d'adresse IP est effectué. Les équipes techniques surveillent attentivement le processus pour résoudre rapidement tout problème éventuel.
+        <br />
+        4. Vérification et validation : Une fois le changement effectué, les équipes s'assurent que les connexions VPN sont opérationnelles et que les systèmes communiquent correctement.
+        <br />  <br />
+
+        <em>Conclusion</em>
+        <br />  <br />
+
+        Le changement d'adresse IP d'un VPN entre deux pays est un processus complexe qui exige une planification minutieuse et une collaboration entre les équipes techniques de chaque site. Cependant, cette pratique est essentielle pour assurer une connectivité sécurisée et fiable entre les bureaux internationaux d'une entreprise. Grâce à cette expérience de stage, j'ai pu apprécier l'importance des réseaux privés virtuels dans le monde de l'infrastructure d'entreprise et la complexité technique qui sous-tend ces connexions virtuelles reliant deux nations éloignées.
+
+      </p>
+      
+    <div class="article-footer">
+        <p class="article-date">Date de publication : 26 juillet 2023</p>
+        <p class="article-signature">Par Perin Léa</p>
+      </div>
+  </div>
+ 
+
+  <footer>
+    <div class="container-p">
+      <p>© 2023 Perin Léa. Tous droits réservés.</p>
+    </div>
+  </footer>
+  
+
+  <script>
+    function goBack() {
+        const redirectURL = new URL('../blog.html', window.location.href);
+      window.location.href = redirectURL.href;
+    }
+  </script>
+    <script>
+      function goBack() {
+        const redirectURL = new URL('../blog.html', window.location.href);
+        window.location.href = redirectURL.href;
+      }
+  
+      const darkModeToggle = document.getElementById('dark-mode-toggle');
+      const body = document.body;
+  
+      // Fonction pour activer/désactiver le mode sombre
+      function toggleDarkMode() {
+        if (body.classList.contains('dark-mode')) {
+          body.classList.remove('dark-mode');
+          localStorage.setItem('dark-mode', 'disabled');
+          darkModeToggle.querySelector('.text-dark-mode').style.display = 'inline';
+          darkModeToggle.querySelector('.text-light-mode').style.display = 'none';
+        } else {
+          body.classList.add('dark-mode');
+          localStorage.setItem('dark-mode', 'enabled');
+          darkModeToggle.querySelector('.text-dark-mode').style.display = 'none';
+          darkModeToggle.querySelector('.text-light-mode').style.display = 'inline';
+        }
+      }
+  
+      // Mettre à jour le texte du bouton en fonction de l'état du mode sombre lors du chargement de la page
+      if (localStorage.getItem('dark-mode') === 'enabled') {
+        body.classList.add('dark-mode');
+        darkModeToggle.querySelector('.text-dark-mode').style.display = 'none';
+        darkModeToggle.querySelector('.text-light-mode').style.display = 'inline';
+      } else {
+        body.classList.remove('dark-mode');
+        darkModeToggle.querySelector('.text-dark-mode').style.display = 'inline';
+        darkModeToggle.querySelector('.text-light-mode').style.display = 'none';
+      }
+  
+      // Écouter le clic sur le bouton pour activer/désactiver le mode sombre
+      darkModeToggle.addEventListener('click', toggleDarkMode);
+    </script>
+  </body>
+</html>

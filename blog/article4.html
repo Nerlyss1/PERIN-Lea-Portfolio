@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Migration vers Google Cloud Spanner</title>
+  <link rel="stylesheet" type="text/css" href="article.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <button class="btn-back" onclick="goBack()">Retour</button>
+  <div class="container">
+        <img src="imgb/java-javascript.webp" alt="Illustration de l'article">
+    <h1>Appronfondissement de Java et JavaScript</h1>
+    <p>
+        Au cours de mon stage, j'ai eu l'opportunité d'approfondir mes compétences en Java et JavaScript, deux langages essentiels et largement utilisés dans le domaine du développement logiciel. En tant que langages de prédilection de l'entreprise, ils ont joué un rôle central dans mon apprentissage.
+        <br /> <br />
+      
+     
+        Grâce aux exercices et aux ressources fournies par mon maître de stage, j'ai pu consolider mes connaissances en Java et en JavaScript, et les appliquer de manière concrète dans le cadre de mon projet comme pour Avatax ou pour ce site. 
+      
+      </p>
+      
+    <div class="article-footer">
+        <p class="article-date">Date de publication : 17 juillet 2023</p>
+        <p class="article-signature">Par Perin Léa</p>
+      </div>
+  </div>
+ 
+
+  <footer>
+    <div class="container-p">
+      <p>© 2023 Perin Léa. Tous droits réservés.</p>
+    </div>
+  </footer>
+  
+
+  <script>
+    function goBack() {
+        const redirectURL = new URL('../blog.html', window.location.href);
+      window.location.href = redirectURL.href;
+    }
+  </script>
+    <script>
+      function goBack() {
+        const redirectURL = new URL('../blog.html', window.location.href);
+        window.location.href = redirectURL.href;
+      }
+  
+      const darkModeToggle = document.getElementById('dark-mode-toggle');
+      const body = document.body;
+  
+      // Fonction pour activer/désactiver le mode sombre
+      function toggleDarkMode() {
+        if (body.classList.contains('dark-mode')) {
+          body.classList.remove('dark-mode');
+          localStorage.setItem('dark-mode', 'disabled');
+          darkModeToggle.querySelector('.text-dark-mode').style.display = 'inline';
+          darkModeToggle.querySelector('.text-light-mode').style.display = 'none';
+        } else {
+          body.classList.add('dark-mode');
+          localStorage.setItem('dark-mode', 'enabled');
+          darkModeToggle.querySelector('.text-dark-mode').style.display = 'none';
+          darkModeToggle.querySelector('.text-light-mode').style.display = 'inline';
+        }
+      }
+  
+      // Mettre à jour le texte du bouton en fonction de l'état du mode sombre lors du chargement de la page
+      if (localStorage.getItem('dark-mode') === 'enabled') {
+        body.classList.add('dark-mode');
+        darkModeToggle.querySelector('.text-dark-mode').style.display = 'none';
+        darkModeToggle.querySelector('.text-light-mode').style.display = 'inline';
+      } else {
+        body.classList.remove('dark-mode');
+        darkModeToggle.querySelector('.text-dark-mode').style.display = 'inline';
+        darkModeToggle.querySelector('.text-light-mode').style.display = 'none';
+      }
+  
+      // Écouter le clic sur le bouton pour activer/désactiver le mode sombre
+      darkModeToggle.addEventListener('click', toggleDarkMode);
+    </script>
+  </body>
+</html>

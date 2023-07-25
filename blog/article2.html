@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Intégration dans l’entreprise d’accueil</title>
+  <link rel="stylesheet" type="text/css" href="article.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <button class="btn-back" onclick="goBack()">Retour</button>
+  <div class="container">
+        <img src="imgb/avatax.png" alt="Illustration de l'article">
+    <h1>Intégrer l'API Avatax en Java</h1>
+    <p>
+        
+        En tant qu'étudiante en informatique effectuant un stage, j'ai eu l'opportunité de me plonger dans le monde passionnant de l'intégration de l'API Avatax en Java. Ce processus ne fut pas sans difficultés, mais il m'a permis d'apprendre énormément sur la résolution de problèmes techniques et la maîtrise des compétences en programmation.
+        <br />  <br />
+    
+        Lors de cette intégration, j'ai commencé par étudier attentivement la documentation de l'API pour comprendre son fonctionnement et ses différentes fonctionnalités. Cela m'a permis d'identifier les endpoints et les paramètres nécessaires pour effectuer les appels à l'API.
+        <br /> <br />
+        Cependant, au fur et à mesure que j'avançais dans l'intégration, j'ai été confrontée à des défis techniques. Certains appels à l'API ne retournaient pas les résultats attendus, et j'ai dû utiliser des outils de débogage pour identifier les erreurs de syntaxe et les problèmes de compatibilité avec notre application existante.
+   
+        <br /><br />
+        Pour résoudre ces problèmes, j'ai collaboré avec mon maître de stage et j'ai recherché des solutions en ligne. J'ai également utilisé des méthodes de manipulation des requêtes API pour adapter les données reçues à notre application.
+  
+        <br /> <br />
+        Cette expérience m'a permis de renforcer mes compétences en programmation et d'acquérir une meilleure compréhension des processus d'intégration d'API.
+        <br /> <br />
+   En conclusion, cette expérience m'a enseigné l'importance de la résolution de problèmes techniques et de l'adaptabilité dans le domaine du développement logiciel. 
+</p>
+    <div class="article-footer">
+        <p class="article-date">Date de publication : 8 juillet 2023</p>
+        <p class="article-signature">Par Perin Léa</p>
+      </div>
+  </div>
+ 
+
+  <footer>
+    <div class="container-p">
+      <p>© 2023 Perin Léa. Tous droits réservés.</p>
+    </div>
+  </footer>
+  
+
+  <script>
+    function goBack() {
+        const redirectURL = new URL('../blog.html', window.location.href);
+      window.location.href = redirectURL.href;
+    }
+  </script>
+  <script>
+    function goBack() {
+      const redirectURL = new URL('../blog.html', window.location.href);
+      window.location.href = redirectURL.href;
+    }
+
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+
+    // Fonction pour activer/désactiver le mode sombre
+    function toggleDarkMode() {
+      if (body.classList.contains('dark-mode')) {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('dark-mode', 'disabled');
+        darkModeToggle.querySelector('.text-dark-mode').style.display = 'inline';
+        darkModeToggle.querySelector('.text-light-mode').style.display = 'none';
+      } else {
+        body.classList.add('dark-mode');
+        localStorage.setItem('dark-mode', 'enabled');
+        darkModeToggle.querySelector('.text-dark-mode').style.display = 'none';
+        darkModeToggle.querySelector('.text-light-mode').style.display = 'inline';
+      }
+    }
+
+    // Mettre à jour le texte du bouton en fonction de l'état du mode sombre lors du chargement de la page
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+      body.classList.add('dark-mode');
+      darkModeToggle.querySelector('.text-dark-mode').style.display = 'none';
+      darkModeToggle.querySelector('.text-light-mode').style.display = 'inline';
+    } else {
+      body.classList.remove('dark-mode');
+      darkModeToggle.querySelector('.text-dark-mode').style.display = 'inline';
+      darkModeToggle.querySelector('.text-light-mode').style.display = 'none';
+    }
+
+    // Écouter le clic sur le bouton pour activer/désactiver le mode sombre
+    darkModeToggle.addEventListener('click', toggleDarkMode);
+  </script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Réparation d'imprimante d'étiquettes</title>
+  <link rel="stylesheet" type="text/css" href="article.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <button class="btn-back" onclick="goBack()">Retour</button>
+  <div class="container">
+        <img src="imgb/reparation2.jpg" alt="Illustration de l'article">
+    <h1>Réparation d'imprimante d'étiquettes</h1>
+    <p>
+        <em>Introduction</em>
+        <br /> <br />
+      
+        Au sein de l'infrastructure d'une entreprise, la maintenance et la réparation des équipements jouent un rôle essentiel pour assurer un fonctionnement sans accroc. Pendant mon stage en informatique, j'ai eu l'occasion d'observer la résolution d'une panne sur une imprimante d'étiquettes, un élément clé du processus de commandes de tissu. Cet article relate cette intervention technique, soulignant l'importance de la gestion proactive des équipements pour maintenir l'efficacité des opérations.
+        <br /> <br />
+
+        <em>Le Rôle de l'Imprimante Thermique d'Étiquettes</em>
+        <br /> <br />
+
+        L'imprimante dont j'ai pu observer le fonctionnement est une imprimante thermique utilisée pour créer des étiquettes. Ces étiquettes sont ensuite collées sur les bobines de tissu afin d'identifier les commandes. J'ai eu l'opportunité de découvrir en détail le processus de fonctionnement de cette imprimante thermique ainsi que son intégration dans le réseau de l'entreprise.
+        <br /> <br />
+
+        <em>La Panne et le Diagnostic</em>
+        <br /> <br />
+
+        L'imprimante d'étiquettes a commencé à présenter des problèmes d'impression. Les étiquettes ne sortaient plus et donc bloquait l'efficacité et l'avancée du service.
+        <br /> <br />
+
+        <em>La Solution</em>
+        <br /> <br />
+
+        Le gestionnaire de l'infrastructure, qui doit également gérer ce type de problème a inspecté méticuleusement l'imprimante et a rapidement identifié le problème par habitude. Une étiquette avait du se décoller lors d'une impression précédente et avait laissé de la colle à l'intérieur, ce qui perturber le mécanisme de défilement des étiquettes. 
+
+        <br />  <br />
+        
+        <em>Détails sur la Visite</em>
+        <br />  <br />
+
+        Le gestionnaire m'a expliqué à quoi servait la visite, un endroit où le tissu est récupéré, vérifié, découpé et ensuite enroulé et emballé.. Il m'a montré les différents boîtiers qui relient les imprimantes et les PC, révélant ainsi l'architecture  qui s'occupe des opérations d'impression et de gestion des commandes. Les PC étaient utilisés pour sélectionner les impressions en fonction des commandes stockées dans la base de données ou afin d'indiquer les potentiels non qualité des tissus, illustrant ainsi l'intégration précise des processus.
+        <br />  <br />
+        
+        
+       <i>La Remise en marche</i> 
+        <br />  <br />
+
+        Après avoir retiré avec précaution l'étiquette indésirable et nettoyé l'intérieur de l'imprimante, le gestionnaire a rétabli le fonctionnement normal de l'appareil. Les étiquettes ont recommencé à être imprimées sans aucun problème. Tout en assistant à cette réparation, j'ai pu apprendre des détails techniques et comprendre l'importance de la maintenance préventive pour garantir une productivité optimale.
+        <br />  <br />
+
+        <em>Conclusion</em>
+        <br />  <br />
+
+        La réparation de cette imprimante d'étiquettes met en lumière l'importance cruciale d'un gestionnaire d'infrastructure polyvalent. En plus de gérer l'ensemble du réseau informatique, il est prêt à intervenir en cas de panne sur des appareils essentiels.
+
+
+      </p>
+      
+    <div class="article-footer">
+        <p class="article-date">Date de publication : 26 juillet 2023</p>
+        <p class="article-signature">Par Perin Léa</p>
+      </div>
+  </div>
+ 
+
+  <footer>
+    <div class="container-p">
+      <p>© 2023 Perin Léa. Tous droits réservés.</p>
+    </div>
+  </footer>
+  
+
+  <script>
+    function goBack() {
+        const redirectURL = new URL('../blog.html', window.location.href);
+      window.location.href = redirectURL.href;
+    }
+  </script>
+    <script>
+      function goBack() {
+        const redirectURL = new URL('../blog.html', window.location.href);
+        window.location.href = redirectURL.href;
+      }
+  
+      const darkModeToggle = document.getElementById('dark-mode-toggle');
+      const body = document.body;
+  
+      // Fonction pour activer/désactiver le mode sombre
+      function toggleDarkMode() {
+        if (body.classList.contains('dark-mode')) {
+          body.classList.remove('dark-mode');
+          localStorage.setItem('dark-mode', 'disabled');
+          darkModeToggle.querySelector('.text-dark-mode').style.display = 'inline';
+          darkModeToggle.querySelector('.text-light-mode').style.display = 'none';
+        } else {
+          body.classList.add('dark-mode');
+          localStorage.setItem('dark-mode', 'enabled');
+          darkModeToggle.querySelector('.text-dark-mode').style.display = 'none';
+          darkModeToggle.querySelector('.text-light-mode').style.display = 'inline';
+        }
+      }
+  
+      // Mettre à jour le texte du bouton en fonction de l'état du mode sombre lors du chargement de la page
+      if (localStorage.getItem('dark-mode') === 'enabled') {
+        body.classList.add('dark-mode');
+        darkModeToggle.querySelector('.text-dark-mode').style.display = 'none';
+        darkModeToggle.querySelector('.text-light-mode').style.display = 'inline';
+      } else {
+        body.classList.remove('dark-mode');
+        darkModeToggle.querySelector('.text-dark-mode').style.display = 'inline';
+        darkModeToggle.querySelector('.text-light-mode').style.display = 'none';
+      }
+  
+      // Écouter le clic sur le bouton pour activer/désactiver le mode sombre
+      darkModeToggle.addEventListener('click', toggleDarkMode);
+    </script>
+  </body>
+</html>

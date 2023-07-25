@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+body {
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+form {
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* Styles pour le bouton "Retour" */
+.back-link {
+  position: absolute;
+  top: 5%;
+  left: 30px;
+  color: #b091d8;
+  transform: translateY(-50%);
+  z-index: 1;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+  padding: 8px 15px; 
+  border: 1px solid #b091d8;
+  text-decoration: none;
+  margin-top:20px !important;
+  margin-bottom: 20px !important;
+}
+
+form h1 {
+  margin-top:20px !important;
+  font-size: 20px;
+}
+
+form .separation {
+  width: 100%;
+  height: 1px;
+  background-color: #b091d8 !important;
+}
+
+form .corps-formulaire {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+form .corps-formulaire .groupe {
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+form .corps-formulaire .gauche .groupe input {
+  margin-top: 5px;
+  padding: 10px 5px 10px 30px;
+  outline-color: #b091d8 !important;
+  border-radius: 5px;
+}
+
+form .corps-formulaire .gauche .groupe i {
+  position: absolute;
+  left: 0;
+  top: 25px;
+  padding: 9px 8px;
+  color: #b091d8 !important;
+}
+
+form .corps-formulaire .droite {
+  margin-left: 40px;
+}
+
+form .corps-formulaire .droite .groupe {
+  height: 100%;
+}
+
+form .corps-formulaire .droite .groupe textarea {
+  margin-top: 5px;
+  padding: 10px;
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #b091d8;
+  outline: none;
+  border-radius: 5px;
+  resize: none;
+  height: 72%;
+}
+
+form .corps-formulaire .droite .groupe input[type="text"] {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #b091d8;
+}
+
+form .pied-formulaire button {
+  margin-top: 10px;
+  background-color: #b091d8;
+  color: white;
+  font-size: 15px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+form .pied-formulaire button:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 920px) {
+  form .corps-formulaire .droite {
+    margin-left: 0px;
+  }
+}
+
+/* Styles pour le formulaire en mode sombre */
+body.dark-mode {
+  background-color: #000!important; /* Fond noir */
+  color: #000000;
+  border: 1px solid #ffffff5d;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2); /* Ajout d'une ombre pour donner l'effet de shader en mode sombre */
+}
+
+body.dark-mode form {
+  background-color: #000!important; /* Fond noir */
+  color: #000000;
+  
+}
+
+/* Styles pour le texte du label en mode sombre */
+body.dark-mode form label {
+  color: #fff; /* Couleur du texte en blanc en mode sombre */
+}
+
+#dark-mode-toggle {
+  position: absolute;
+  top: 5%;
+  right: 30px;
+  transform: translateY(-50%);
+  z-index: 1;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+  padding: 8px 15px; 
+  border: 1px solid #b091d8;
+  margin-top:20px !important;
+  margin-bottom: 20px !important;
+  font-size: 17px;
+}
+
+/* Styles pour les titres en mode sombre */
+body.dark-mode form h1,
+body.dark-mode form .separation,
+body.dark-mode form .groupe i {
+  color: #fff;
+}
+
+/* Styles pour les champs de saisie en mode sombre */
+body.dark-mode form .groupe input,
+body.dark-mode form .groupe textarea {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-color: #b091d8;
+}
+
+
+/* Styles pour le bouton "Envoyez votre message" en mode sombre */
+body.dark-mode form .pied-formulaire button {
+  background-color:#b091d8;
+  color: #fff;
+  border: 1px solid #ffffff5d;
+}
+
+/* Styles pour le texte saisi dans les champs en mode sombre */
+body.dark-mode form .groupe input::placeholder,
+body.dark-mode form .groupe textarea::placeholder {
+  color: #fff;
+}
+

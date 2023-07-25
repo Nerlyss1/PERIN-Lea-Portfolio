@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="css/contact.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="dark-form">
+    <form action="contact.php" method="post" onsubmit="return validateForm()">
+        <button id="dark-mode-toggle">
+        <span class="text-dark-mode">Mode sombre</span>
+        <span class="text-light-mode">Mode clair</span>
+      </button>  
+      <a href="index.html" class="back-link">Retour</a>
+
+      <div class="container">
+        <h1>Contactez-moi</h1>
+        <div class="separation"></div>
+        <div class="corps-formulaire">
+          <div class="gauche">
+            <div class="groupe">
+              <label>Votre nom</label>
+              <input type="text" name ='name' required autocomplete="off" />
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="groupe">
+              <label>Votre e-mail</label>
+              <input type="email" name = 'email' id="email" required autocomplete="off" />
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="groupe">
+              <label>Votre téléphone</label>
+              <input type="tel" name = 'telephone' id="telephone" pattern="[0-9]+" autocomplete="off" />
+              <i class="fas fa-mobile"></i>
+            </div>
+          </div>
+
+          <div class="droite">
+            <div class="groupe">
+              <label>Message</label>
+              <textarea name="message" placeholder="Saisissez ici..." required></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="pied-formulaire" align="center">
+          <button>Envoyez votre message</button>
+        </div>
+      </div>
+    </form> 
+  </div>
+  <script src="app.js"></script>
+  <script>
+    function validateForm() {
+      const emailInput = document.getElementById('email');
+      const telephoneInput = document.getElementById('telephone');
+      const emailValue = emailInput.value;
+      const telephoneValue = telephoneInput.value;
+
+      if (!emailValue.includes('@')) {
+        alert('Veuillez entrer une adresse e-mail valide.');
+        return false;
+      }
+
+      if (telephoneValue && !/^[0-9]+$/.test(telephoneValue)) {
+        alert('Le numéro de téléphone ne doit contenir que des chiffres.');
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+</body>
+</html>

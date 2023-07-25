@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Intégration dans l’entreprise d’accueil</title>
+  <link rel="stylesheet" type="text/css" href="article.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="button-container">
+    <button class="btn-back" onclick="goBack()">Retour</button>
+  </div>
+  <div class="container">
+    <img src="imgb/LPBC.jpg" alt="Illustration de l'article">
+    <h1>Intégration dans l’entreprise d’accueil</h1>
+    <p>
+      Je suis actuellement en stage de 6 semaines au sein de Lainière de Picardie, et je me sens parfaitement intégrée dans l'entreprise. C'est une opportunité incroyable pour moi de découvrir le fonctionnement d'une entreprise, en particulier dans le domaine industriel.
+      <br /> <br />
+    
+      Lors de mon stage, j'ai pu observer de près le travail d'équipe et la communication entre les différents services. J'ai été chaleureusement accueillie par mes collègues qui ont été patients et attentifs à mon apprentissage. Cela m'a permis de me sentir à l'aise et de poser des questions pour mieux comprendre les activités de l'entreprise.
+      <br /> <br />
+    
+      J'ai également eu l'opportunité de participer à des travaux pratiques réels, ce qui a été très enrichissant pour moi. J'ai pu mettre en pratique mes connaissances acquises lors de ma formation et découvrir de nouvelles compétences spécifiques au secteur industriel. Cela m'a donné un aperçu concret du travail que je pourrais réaliser dans le futur en tant que professionnelle.
+      <br /> <br />
+    
+      En résumé, mon intégration dans l’entreprise d’accueil a été une expérience très positive. Je suis reconnaissante envers toute l'équipe de Lainière de Picardie pour leur accueil chaleureux et leur accompagnement tout au long de mon stage. Ce stage m'a permis de développer mes compétences professionnelles, de découvrir le monde du travail et de me projeter dans ma future carrière.
+    </p>
+    <div class="article-footer">
+        <p class="article-date">Date de publication : 5 juillet 2023</p>
+        <p class="article-signature">Par Perin Léa</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container-p">
+      <p>© 2023 Perin Léa. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script>
+    function goBack() {
+      const redirectURL = new URL('../blog.html', window.location.href);
+      window.location.href = redirectURL.href;
+    }
+
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+
+    // Fonction pour activer/désactiver le mode sombre
+    function toggleDarkMode() {
+      if (body.classList.contains('dark-mode')) {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('dark-mode', 'disabled');
+        darkModeToggle.querySelector('.text-dark-mode').style.display = 'inline';
+        darkModeToggle.querySelector('.text-light-mode').style.display = 'none';
+      } else {
+        body.classList.add('dark-mode');
+        localStorage.setItem('dark-mode', 'enabled');
+        darkModeToggle.querySelector('.text-dark-mode').style.display = 'none';
+        darkModeToggle.querySelector('.text-light-mode').style.display = 'inline';
+      }
+    }
+
+    // Mettre à jour le texte du bouton en fonction de l'état du mode sombre lors du chargement de la page
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+      body.classList.add('dark-mode');
+      darkModeToggle.querySelector('.text-dark-mode').style.display = 'none';
+      darkModeToggle.querySelector('.text-light-mode').style.display = 'inline';
+    } else {
+      body.classList.remove('dark-mode');
+      darkModeToggle.querySelector('.text-dark-mode').style.display = 'inline';
+      darkModeToggle.querySelector('.text-light-mode').style.display = 'none';
+    }
+
+    // Écouter le clic sur le bouton pour activer/désactiver le mode sombre
+    darkModeToggle.addEventListener('click', toggleDarkMode);
+  </script>
+
+</body>
+</html>

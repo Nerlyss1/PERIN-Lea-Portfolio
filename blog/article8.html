@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Migration et Configuration d'un switch</title>
+  <link rel="stylesheet" type="text/css" href="article.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <button class="btn-back" onclick="goBack()">Retour</button>
+  <div class="container">
+        <img src="imgb/switch.jpg" alt="Illustration de l'article">
+    <h1>Migration et Configuration d'un switch</h1>
+    <p>
+        <em>Introduction</em>
+        <br /> <br />
+      
+        Durant mon stage en informatique,  j'ai eu une expérience enrichissante lors de la migration d'un switch 24 ports vers un switch 48 ports. Cette tâche cruciale visait à permettre à l'entreprise de répondre à ses besoins croissants en termes de connectivité réseau. Cet article relate cette migration réussie, mettant en évidence les étapes clés du processus, notamment l'utilisation de Putty, le transfert via TFTP, ainsi que la génération de clés SSH.
+
+        <br /> <br />
+
+        <em>Le Rôle Fondamental du Switch</em>
+        <br /> <br />
+
+        Au cœur de l'infrastructure réseau, le switch est un dispositif qui joue un rôle essentiel dans la transmission de données entre les appareils connectés. Il agit comme un pont entre les périphériques, en acheminant intelligemment les paquets de données vers leur destination. Grâce à sa capacité à créer des connexions directes entre les périphériques, le switch améliore la vitesse et l'efficacité du réseau, ce qui en fait un élément clé de l'architecture réseau moderne.
+        <br /> <br />
+
+        <em>Le Défi de l'Extension du Réseau</em>
+        <br /> <br />
+
+        Face à une demande croissante de connectivité, l'entreprise a décidé de remplacer son switch 24 ports par un switch 48 ports. L'objectif était d'assurer une évolutivité suffisante pour permettre la connexion de nouveaux appareils sans compromettre les performances du réseau existant.
+        <br /> <br />
+
+        <em>La Migration : Étape par Étape</em>
+        <br /> <br />
+
+        1. <B>Préparation :</B> Avant de procéder à la migration, nous avons analysé attentivement la configuration de l'ancien switch 24 ports pour m'assurer de bien comprendre sa structure et ses paramètres. 
+        <br /> 
+        2. <B>Connexion au Switch :</B> À l'aide de l'outil Putty, nous avons établi une connexion sécurisée avec le switch, me permettant d'accéder à sa console de gestion en ligne de commande.
+        <br /> 
+        3. <B>Sauvegarde de la Configuration :</B> Avant de faire tout changement, nous avons pris soin de sauvegarder la configuration actuelle de l'ancien switch, utilisant le transfert via TFTP pour stocker les fichiers de sauvegarde en toute sécurité.
+        <br /> 
+        4. <B>Transfert de la Configuration :</B> Nous avons récupéré les fichiers de sauvegarde sur le nouveau switch 48 ports. En utilisant les connaissances acquises lors de l'analyse de l'ancienne configuration, j'ai reconfiguré le nouveau switch pour refléter les mêmes paramètres et fonctionnalités.
+        <br /> 
+        5. <B> Nouvelle Sauvegarde de la Configuration :</B> Nous avons à nouveau sauvegarde la configuration du nouveau switch cette fois.
+        <br /> 
+        6. <B>Génération de Clés SSH :</B>Pour renforcer la sécurité de la connexion, j'ai généré des clés SSH et configuré le switch pour permettre une authentification sécurisée.
+        <br /> 
+        
+        <em>Conclusion</em>
+        <br />  <br />
+        La migration d'un switch 24 ports vers un switch 48 ports a permis de répondre aux exigences croissantes en matière de connectivité. En utilisant des outils tels que Putty et TFTP, ainsi que la génération de clés SSH, j'ai pu contribuer à la réussite de cette migration technique. Cette expérience m'a permis de développer mes compétences en gestion de réseau et de comprendre l'importance de planifier soigneusement et de sauvegarder les configurations lors de tâches de cette envergure.
+       
+      </p>
+      
+    <div class="article-footer">
+        <p class="article-date">Date de publication : 26 juillet 2023</p>
+        <p class="article-signature">Par Perin Léa</p>
+      </div>
+  </div>
+ 
+
+  <footer>
+    <div class="container-p">
+      <p>© 2023 Perin Léa. Tous droits réservés.</p>
+    </div>
+  </footer>
+  
+
+  <script>
+    function goBack() {
+        const redirectURL = new URL('../blog.html', window.location.href);
+      window.location.href = redirectURL.href;
+    }
+  </script>
+    <script>
+      function goBack() {
+        const redirectURL = new URL('../blog.html', window.location.href);
+        window.location.href = redirectURL.href;
+      }
+  
+      const darkModeToggle = document.getElementById('dark-mode-toggle');
+      const body = document.body;
+  
+      // Fonction pour activer/désactiver le mode sombre
+      function toggleDarkMode() {
+        if (body.classList.contains('dark-mode')) {
+          body.classList.remove('dark-mode');
+          localStorage.setItem('dark-mode', 'disabled');
+          darkModeToggle.querySelector('.text-dark-mode').style.display = 'inline';
+          darkModeToggle.querySelector('.text-light-mode').style.display = 'none';
+        } else {
+          body.classList.add('dark-mode');
+          localStorage.setItem('dark-mode', 'enabled');
+          darkModeToggle.querySelector('.text-dark-mode').style.display = 'none';
+          darkModeToggle.querySelector('.text-light-mode').style.display = 'inline';
+        }
+      }
+  
+      // Mettre à jour le texte du bouton en fonction de l'état du mode sombre lors du chargement de la page
+      if (localStorage.getItem('dark-mode') === 'enabled') {
+        body.classList.add('dark-mode');
+        darkModeToggle.querySelector('.text-dark-mode').style.display = 'none';
+        darkModeToggle.querySelector('.text-light-mode').style.display = 'inline';
+      } else {
+        body.classList.remove('dark-mode');
+        darkModeToggle.querySelector('.text-dark-mode').style.display = 'inline';
+        darkModeToggle.querySelector('.text-light-mode').style.display = 'none';
+      }
+  
+      // Écouter le clic sur le bouton pour activer/désactiver le mode sombre
+      darkModeToggle.addEventListener('click', toggleDarkMode);
+    </script>
+  </body>
+</html>

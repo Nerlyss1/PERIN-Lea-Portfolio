@@ -1,0 +1,208 @@
+body {
+  background-size: cover;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.navbar {
+ 
+  margin-bottom: 50px;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 40px;
+  color: #000000 !important; 
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+
+.person-container {
+  text-align: left;
+  padding: 20px;
+  margin: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  width: 300px;
+}
+
+
+.person-container img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5%;
+  margin-bottom: 10px;
+}
+
+.person-container h3 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.person-container p {
+  font-size: 18px;
+  color: #000000 !important; 
+}
+
+.margin-top-0 {
+  margin-top: 0;
+}
+
+.navbar .navbar-brand {
+  font-size: 20px;
+}
+
+/* Pour les liens dans la nav bar en mode sombre */
+.dark-mode .navbar-nav .nav-link {
+  color: #fff;
+}
+
+/* Styles pour la barre de navigation */
+.navbar .navbar-brand {
+  font-size: 20px;
+  color: #fff;
+}
+
+
+.navbar-light .navbar-nav .nav-link {
+  color: #fff;
+}
+
+
+.navbar.navbar {
+  padding: 20px 40px;
+  background: linear-gradient(90deg, #f7d7f9, #8f63c8, #a492d1, #3c287f);
+  background-size: 200% 200%;
+  font-size: 20px;
+  margin-bottom: 65px;
+  color: white !important;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  align-items: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.container p {
+  margin: 0;
+  font-size: 16px;
+  color: #000000;
+  text-align: center;
+}
+
+/* Effet de surbrillance pour les liens actifs */
+.navbar-nav .nav-item .nav-link.active,
+.navbar-brand:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 5px;
+  transition: background-color 0.3s, font-weight 0.3s; 
+  font-weight: normal; 
+}
+
+/* Effet de surbrillance au survol de la souris */
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .nav-link.active:hover,
+.navbar-brand:hover {
+  background-color: rgba(0, 0, 0, 0.1); 
+  border-radius: px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+/* Styles pour le fond en mode sombre */
+body.dark-mode {
+  background-color: #000 !important;
+}
+
+/* Styles pour le bouton */
+#dark-mode-toggle {
+  position: absolute;
+  top: 22px;
+  right: 20px;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+  border-color: #ffffffe1;
+  padding: 5px 10px;
+}
+
+/* Style pour le texte du bouton en mode sombre */
+.dark-mode #dark-mode-toggle {
+  color: #fff;
+}
+
+/* Style pour la bordure inférieure de la navbar en mode sombre */
+.dark-mode .navbar.navbar {
+  border-bottom: 1px solid #ffffff93;
+}
+
+/* Styles pour le footer en mode sombre */
+.dark-mode footer {
+  background-color: #000;
+  color: #fff;
+  border-top: 1px solid #ffffff5d;
+}
+
+/* Styles pour le texte en mode sombre */
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode p,
+.dark-mode a,
+.dark-mode li {
+  color: #fff !important;
+}
+
+/* Styles pour les containers en mode sombre */
+.dark-mode .person-container {
+  background-color: #ffffff23;
+  color: #fff!important;
+  border: 1px solid#ffffff5d !important;
+}
+
+/* Style pour le trait en mode sombre */
+.dark-mode .blog-post h2::before,
+.dark-mode .person-container::after { /* Ajout de ::after pour cibler le trait dans les person-container */
+  background-color: #fff !important;
+}
+
+/* Styles pour le texte en mode normal */
+.navbar-nav .nav-link {
+  color: #fff;
+}
+
+
+
+/* Style pour le trait en mode sombre */
+.dark-mode .person-container h3::after {
+  background-color: #fff;
+  content: "";
+  display: block;
+  height: 1px;
+  width: 60%;
+  margin: 10px auto;
+}
+
