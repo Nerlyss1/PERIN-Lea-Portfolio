@@ -264,31 +264,34 @@ body.dark-mode {
 /* Media queries pour les petits écrans */
 @media screen and (max-width: 767px) {
 
+  .page-title {
+    font-size: 35px; 
+    margin-bottom: 20px; 
+  }
+
   .company-image img {
     width: 130px;
     height: 130px;
     margin-top: -160px;
-    margin-left: 300px;
+    margin-left: 270px;
   }
 
-   /*le bouton "mode sombre" */
-   #dark-mode-toggle {
-    margin-right: 100px;
-    margin-top: -4px;
-  }  
+ /* le bouton "mode sombre" */
+ #dark-mode-toggle {
+  margin-right: 100px;
+  margin-top: -1px;
+  font-size: 14px;
+  padding: 8px;
+}  
+
     /* Réorganiser l'ordre du contenu pour que l'image apparaisse après le texte */
   .company-content {
     flex-direction: column;
     align-items: center;
   }
+
   .btn-direction-blog {
-  margin-left: 35px;
+  margin-left: 10x;
   margin-top: 50px;
   }
-
-   /* le bouton "mode sombre" */
-   #dark-mode-toggle {
-    margin-right: 100px;
-    margin-top: -4px;
-  }  
 }
