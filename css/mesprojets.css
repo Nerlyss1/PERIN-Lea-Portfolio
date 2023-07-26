@@ -201,3 +201,60 @@ body.dark-mode {
   width: 60%;
   margin: 10px auto;
 }
+
+/* Media query pour la réactivité */
+
+/* Pour les écrans plus petits que 768px (par exemple, smartphones) */
+@media screen and (max-width: 767px) {
+  .container-first {
+    top: 20%; /* Ajuster la position du conteneur principal pour les petits écrans */
+  }
+
+  h1 {
+    font-size: 48px; /* Ajuster la taille du titre pour les petits écrans */
+    margin-bottom: 20px; /* Ajuster la marge inférieure du titre pour les petits écrans */
+  }
+
+  .container-box {
+    margin-bottom: 30px; /* Ajuster l'espacement entre les .container-box pour les petits écrans */
+    flex-direction: column !important;
+    align-items: center; /* Centrer les boutons horizontalement */
+  }
+
+
+  .person-container:last-child {
+    margin-bottom: 50px;
+  }
+
+  .container-btns {
+    align-items: center; /* Centrer les boutons horizontalement */
+  }
+
+  .btn-first {
+    width: 100%; /* Ajuster la largeur des boutons pour les petits écrans */
+    margin-bottom: 20px; /* Ajuster la marge inférieure des boutons pour les petits écrans */
+  }
+
+  /* le bouton "mode sombre" */
+  #dark-mode-toggle {
+    margin-right: 100px;
+    margin-top: -4px;
+  }  
+}
+
+/* Pour les écrans plus grands que 767px (par exemple, tablettes et ordinateurs de bureau) */
+  @media screen and (min-width: 768px) {
+  .container-first {
+    top: 30%; 
+    }
+
+    h1 {
+    font-size: 110px; 
+    margin-bottom: 50px; 
+    }
+
+  .btn-first {
+    width: 200px; 
+    margin-bottom: 50px; 
+    }
+  }

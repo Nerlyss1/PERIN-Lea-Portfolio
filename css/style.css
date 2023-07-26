@@ -154,3 +154,39 @@ h1 span {
   width: 40px;
   height: 40px;
 }
+
+/* Media queries pour la réactivité */
+
+/* Pour les écrans plus petits que 768px (par exemple, smartphones) */
+@media screen and (max-width: 1000px) {
+  .container-first {
+    top: 27%;
+  }
+  
+  h1 {
+    font-size: 60px; 
+  }
+  
+  .btn-first {
+    width: 100%;
+  }
+  
+  .lignes {
+    top: 2%;
+  }
+  
+  .logo {
+    top: 2%;
+  }
+
+  .container-btns {
+    flex-direction: column; 
+    align-items: center; 
+  }
+  .btn-first {
+    width: 180px; 
+    font-size: 24px; 
+    padding: 15px; 
+    margin-top: 20px; 
+  }
+  }

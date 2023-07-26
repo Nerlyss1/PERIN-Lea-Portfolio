@@ -207,3 +207,20 @@ body.dark-mode footer {
 body.dark-mode footer p {
   color: #fff;
 }
+
+/* Media queries pour les écrans de taille moyenne */
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 90%; 
+  }
+}
+
+/* Media queries pour les petits écrans */
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 100%; 
+    margin: 0 30px; 
+    margin-top: 80px;
+    margin-bottom: 20px;
+  }
+}
