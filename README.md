@@ -4,7 +4,7 @@ Ce projet représente mon site portfolio informatique, qui présente mes compét
 
 ## Accès au site
 
-Vous pouvez accéder à mon site portfolio en cliquant sur le lien suivant : [Mon Site Portfolio](https://www.mon-site-portfolio.com)
+Vous pouvez accéder à mon site portfolio en cliquant sur le lien suivant : [Mon Site Portfolio](https://nerlyss1.github.io/PERIN-Lea-Portfolio/presentation.html)
 
 ## Contenu du portfolio
 
@@ -56,7 +56,8 @@ Pour déployer votre site portfolio avec GitHub, suivez ces étapes simples :
 
 Voici un aperçu statique de mon site portfolio pour que vous puissiez avoir une idée de son apparence :
 
-![Aperçu du Portfolio](portfolio_preview.png)
+![Aperçu du Portfolio](![image](https://github.com/Nerlyss1/PERIN-Lea-Portfolio/assets/138784994/227c749a-40a0-4d32-acc6-d005f65424cb)
+)
 
 Veuillez noter que l'aperçu ci-dessus est une image statique et ne reflète pas l'interactivité et les fonctionnalités du site portfolio complet.
 
