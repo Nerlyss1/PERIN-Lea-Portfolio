@@ -160,17 +160,14 @@ h1 span {
 /* Pour les écrans plus petits que 768px (par exemple, smartphones) */
 @media screen and (max-width: 1000px) {
   .container-first {
-    top: 27%;
+    top: 22%;
   }
   
   h1 {
-    font-size: 60px; 
+    margin-top: -30px;
+    font-size: 45px; 
   }
-  
-  .btn-first {
-    width: 100%;
-  }
-  
+    
   .lignes {
     top: 2%;
   }
@@ -184,9 +181,23 @@ h1 span {
     align-items: center; 
   }
   .btn-first {
-    width: 180px; 
+    width: 170px; 
     font-size: 24px; 
-    padding: 15px; 
+    padding: 12px; 
     margin-top: 20px; 
   }
+
+  /* Styles pour les icônes des médias sociaux */
+.medias {
+  list-style-type: none;
+  position: absolute;
+  right: 3.3%;
+  top: 40%; /* Ajustez cette valeur pour remonter les bulles */
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
   }
