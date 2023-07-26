@@ -325,16 +325,16 @@ body.dark-mode {
 
   .blog-post {
     flex: 0 0 calc(100% - 40px); 
-    margin: 10px 20px; 
-
-   /* le bouton "mode sombre" */
-   #dark-mode-toggle {
-    margin-right: 100px;
-    margin-top: -4px;
-  }  
-
-  .blog-post:last-child {
-    margin-bottom: 50px;
-  }
+    margin: 10px 20px;   
 }
+
+.blog-post:last-child {
+  margin-bottom: 50px;
+}
+
+ /* le bouton "mode sombre" */
+ #dark-mode-toggle {
+  margin-right: 100px;
+  margin-top: -4px;
+} 
 }
