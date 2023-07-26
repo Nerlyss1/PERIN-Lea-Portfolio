@@ -52,13 +52,6 @@ Pour déployer votre site portfolio avec GitHub, suivez ces étapes simples :
 
 8. Votre site portfolio est maintenant déployé à l'adresse : `https://votre-nom-d-utilisateur.github.io/mon-site-portfolio/`
 
-## Aperçu du Portfolio
-
-Voici un aperçu statique de mon site portfolio pour que vous puissiez avoir une idée de son apparence :
-
-![Aperçu du Portfolio](![image](https://github.com/Nerlyss1/PERIN-Lea-Portfolio/assets/138784994/227c749a-40a0-4d32-acc6-d005f65424cb)
-)
-
 Veuillez noter que l'aperçu ci-dessus est une image statique et ne reflète pas l'interactivité et les fonctionnalités du site portfolio complet.
 
 Ceci conclut le README pour mon site portfolio informatique. J'espère que cela vous aidera à présenter vos compétences et réalisations de manière professionnelle. Si vous avez des questions ou des suggestions d'amélioration, n'hésitez pas à me contacter. Bonne présentation de votre portfolio !
