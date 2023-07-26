@@ -9,10 +9,6 @@ body {
   margin: 0 20px; 
 }
 
-.navbar {
-  margin-bottom: 30px;
-}
-
 /* Pour les liens dans la nav bar en mode sombre */
 .dark-mode .navbar-nav .nav-link {
   color: #fff;
@@ -33,8 +29,6 @@ h1 {
   font-size: 40px;
   color: #000000 !important;   
   text-align: center;
-  margin-top: 40px;
-  margin-bottom: 100px;
 }
 
 img {
@@ -165,7 +159,7 @@ img {
   background: linear-gradient(90deg, #f7d7f9, #8f63c8, #a492d1, #3c287f);
   background-size: 200% 200%;
   font-size: 20px;
-  margin-bottom: 65px;
+  margin-bottom: 30px;
   color: white !important;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
 }

@@ -11,11 +11,11 @@ body {
 .container-box {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .navbar {
-  margin-bottom: 50px;
+  margin-bottom: 30px !important;
 }
 
 h1 {
@@ -24,7 +24,6 @@ h1 {
   color: #000000 !important; 
   text-align: center;
   margin-top: 40px;
-  margin-bottom: 100px;
 }
 
 .person-container {
