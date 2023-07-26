@@ -5,7 +5,6 @@ body {
   padding: 0;
 }
 
-/* Styles pour les conteneurs principaux */
 .container-box {
   display: flex;
   justify-content: center;
@@ -19,28 +18,25 @@ body {
   margin-top: 50px;
 }
 
-/* Styles pour la barre de navigation */
 .navbar .navbar-brand {
   font-size: 20px;
 }
 
-/* Styles pour les liens dans la barre de navigation en mode sombre */
+/* Pour les liens dans la nav bar en mode sombre */
 .dark-mode .navbar-nav .nav-link {
   color: #fff;
 }
 
-/* Styles pour la barre de navigation en mode sombre */
+/* Styles pour la barre de navigation */
 .navbar .navbar-brand {
   font-size: 20px;
   color: #fff;
 }
 
-/* Styles pour les liens dans la barre de navigation en mode clair */
 .navbar-light .navbar-nav .nav-link {
   color: #fff;
 }
 
-/* Styles pour la navbar */
 .navbar.navbar {
   padding: 20px 40px;
   background: linear-gradient(90deg, #f7d7f9, #8f63c8, #a492d1, #3c287f);
@@ -69,7 +65,6 @@ h2 {
   margin-bottom: 100px;
 }
 
-/* Styles pour les images */
 .person-container img {
   width: 150px;
   height: 150px;
@@ -80,7 +75,6 @@ h2 {
   justify-content: center;
 }
 
-/* Styles pour les conteneurs des images */
 .person-container {
   display: flex;
   flex-direction: column;
@@ -109,7 +103,15 @@ h2 {
   text-align: left;
 }
 
-/* Styles pour le bouton "CV" */
+.margin-top-0 {
+  margin-top: 0;
+}
+
+.btn-container {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
 .btn-direction-cv {
   display: inline-block;
   padding: 10px 30px;
@@ -124,7 +126,6 @@ h2 {
   overflow: hidden;
 }
 
-/* Styles pour les animations du bouton "CV" */
 .btn-direction-cv:before,
 .btn-direction-cv:after {
   content: "";
@@ -134,7 +135,6 @@ h2 {
   border: 2px solid white;
 }
 
-/* Styles pour l'animation de la flèche du bouton "CV" */
 .btn-direction-cv:before {
   top: -10px;
   left: -10px;
@@ -155,7 +155,6 @@ h2 {
   animation: arrowAnimation 1.5s linear infinite;
 }
 
-/* Animation pour l'animation de la flèche du bouton "CV" */
 @keyframes arrowAnimation {
   0% {
     transform: rotate(45deg);
@@ -185,7 +184,7 @@ footer {
   text-align: center;
 }
 
-/* Styles pour l'effet de surbrillance des liens actifs */
+/* Effet de surbrillance pour les liens actifs */
 .navbar-nav .nav-item .nav-link.active,
 .navbar-brand:hover {
   background-color: #ffffff;
@@ -195,7 +194,7 @@ footer {
   font-weight: normal; 
 }
 
-/* Styles pour l'effet de surbrillance au survol de la souris */
+/* Effet de surbrillance au survol de la souris */
 .navbar-nav .nav-item .nav-link:hover,
 .navbar-nav .nav-item .nav-link.active:hover,
 .navbar-brand:hover {
@@ -205,12 +204,13 @@ footer {
   border-radius: 10px;
 }
 
+
 /* Styles pour le fond en mode sombre */
 body.dark-mode {
   background-color: #000 !important;
 }
 
-/* Styles pour le bouton en mode sombre */
+/* Styles pour le bouton */
 #dark-mode-toggle {
   position: absolute;
   top: 22px;
@@ -222,12 +222,12 @@ body.dark-mode {
   padding: 5px 10px;
 }
 
-/* Styles pour le texte du bouton en mode sombre */
+/* Style pour le texte du bouton en mode sombre */
 .dark-mode #dark-mode-toggle {
   color: #fff;
 }
 
-/* Styles pour la bordure inférieure de la navbar en mode sombre */
+/* Style pour la bordure inférieure de la navbar en mode sombre */
 .dark-mode .navbar.navbar {
   border-bottom: 1px solid #ffffff93;
 }
@@ -255,7 +255,7 @@ body.dark-mode {
   border: 1px solid #ffffff5d !important;
 }
 
-/* Styles pour le trait en mode sombre */
+/* Style pour le trait en mode sombre */
 .dark-mode .blog-post h2::before,
 .dark-mode .person-container::after { /* Ajout de ::after pour cibler le trait dans les person-container */
   background-color: #ffffff5d !important;
@@ -265,3 +265,20 @@ body.dark-mode {
 .navbar-nav .nav-link {
   color: #fff;
 }
+
+/* Styles pour le bouton en mode sombre */
+.dark-mode .btn-direction-cv {
+  border: 1px solid#ffffff5d;
+  color: #fff;
+}
+
+/* Style pour le trait en mode sombre */
+.dark-mode .person-container h3::after {
+  background-color: #fff;
+  content: "";
+  display: block;
+  height: 1px;
+  width: 60%;
+  margin: 10px auto;
+}
+
