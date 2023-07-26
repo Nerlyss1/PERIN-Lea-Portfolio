@@ -29,7 +29,6 @@ body {
   margin-top: 20px;
 }
 
-
 .btn-back {
   position: absolute;
   top: 20px;
@@ -75,7 +74,6 @@ p {
   font-size: 18px;
 }
 
-/* Styles pour le footer */
 footer {
   width: 100%;
   height: 60px;
@@ -84,9 +82,8 @@ footer {
   background-color: #ffffff;
   align-items: center;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  margin-top: auto; /* Le footer sera toujours en bas de la page */
+  margin-top: auto; 
 }
-
 
 .container-p {
   text-align: center; 
@@ -113,7 +110,6 @@ body.dark-mode, body.dark-mode h1, body.dark-mode p, body.dark-mode .article-foo
   color: #fff;
 }
 
-/* Styles pour le titre h1 en mode sombre */
 body.dark-mode h1 {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -135,12 +131,11 @@ body.dark-mode #dark-mode-toggle {
   border-color: #fff;
 }
 
-
 /* Styles pour le bouton retour */
 .btn-back {
   position: absolute;
   top: 20px;
-  left: 20px; /* Placer le bouton "Retour" à gauche */
+  left: 20px; 
   padding: 10px 15px;
   text-decoration: none;
   background-color: #333;
@@ -172,7 +167,7 @@ body.dark-mode .btn-back {
   color: #fff;
   border-color: #ffffff5d;
   padding: 10px 15px;
-  font-size: 16px; /* Ajout de la taille de police */
+  font-size: 16px;
 }
 
 /* Style pour le texte du bouton en mode sombre */

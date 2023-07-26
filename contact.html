@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="css/contact.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"/>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Contact</title>
   <link rel="stylesheet" href="style.css" />
@@ -14,7 +12,7 @@
 </head>
 <body>
   <div class="dark-form">
-    <form action="contact.php" method="post" onsubmit="return validateForm()">
+    <form id="contact-form" onsubmit="return validateForm()">
         <button id="dark-mode-toggle">
         <span class="text-dark-mode">Mode sombre</span>
         <span class="text-light-mode">Mode clair</span>
@@ -56,28 +54,7 @@
       </div>
     </form> 
   </div>
-  <script src="app.js"></script>
-  <script>
-    function validateForm() {
-      const emailInput = document.getElementById('email');
-      const telephoneInput = document.getElementById('telephone');
-      const emailValue = emailInput.value;
-      const telephoneValue = telephoneInput.value;
-
-      if (!emailValue.includes('@')) {
-        alert('Veuillez entrer une adresse e-mail valide.');
-        return false;
-      }
-
-      if (telephoneValue && !/^[0-9]+$/.test(telephoneValue)) {
-        alert('Le numéro de téléphone ne doit contenir que des chiffres.');
-        return false;
-      }
-
-      return true;
-    }
-  </script>
-
-
+  
+  <script src="email.js"></script>
 </body>
 </html>

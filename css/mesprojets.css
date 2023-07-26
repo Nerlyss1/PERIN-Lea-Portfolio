@@ -7,6 +7,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+
 .container-box {
   display: flex;
   justify-content: center;
@@ -14,7 +15,6 @@ body {
 }
 
 .navbar {
- 
   margin-bottom: 50px;
 }
 
@@ -36,7 +36,6 @@ h1 {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   width: 300px;
 }
-
 
 .person-container img {
   width: 150px;
@@ -61,26 +60,26 @@ h1 {
   margin-top: 0;
 }
 
+/* Styles pour la police et la taille des caractères dans la barre de navigation */
 .navbar .navbar-brand {
   font-size: 20px;
 }
 
-/* Pour les liens dans la nav bar en mode sombre */
+/* Styles pour les liens dans la barre de navigation en mode sombre */
 .dark-mode .navbar-nav .nav-link {
   color: #fff;
 }
 
-/* Styles pour la barre de navigation */
+/* Styles pour la barre de navigation en mode sombre */
 .navbar .navbar-brand {
   font-size: 20px;
   color: #fff;
 }
 
-
+/* Styles pour les liens dans la barre de navigation en mode clair */
 .navbar-light .navbar-nav .nav-link {
   color: #fff;
 }
-
 
 .navbar.navbar {
   padding: 20px 40px;
@@ -91,7 +90,6 @@ h1 {
   color: white !important;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
 }
-
 
 footer {
   position: fixed;
@@ -138,7 +136,7 @@ body.dark-mode {
   background-color: #000 !important;
 }
 
-/* Styles pour le bouton */
+/* Styles pour le bouton "Mode sombre" */
 #dark-mode-toggle {
   position: absolute;
   top: 22px;
@@ -150,7 +148,7 @@ body.dark-mode {
   padding: 5px 10px;
 }
 
-/* Style pour le texte du bouton en mode sombre */
+/* Style pour le texte du bouton "Mode sombre" en mode sombre */
 .dark-mode #dark-mode-toggle {
   color: #fff;
 }
@@ -194,8 +192,6 @@ body.dark-mode {
   color: #fff;
 }
 
-
-
 /* Style pour le trait en mode sombre */
 .dark-mode .person-container h3::after {
   background-color: #fff;
@@ -205,4 +201,3 @@ body.dark-mode {
   width: 60%;
   margin: 10px auto;
 }
-

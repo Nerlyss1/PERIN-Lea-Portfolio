@@ -1,3 +1,4 @@
+/* Réinitialisation des styles pour tous les éléments */
 *, ::before, ::after {
   box-sizing: border-box;
   margin: 0;
@@ -7,12 +8,15 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   height: 100vh;
+  /* Crée un dégradé de couleurs en arrière-plan */
   background: linear-gradient(90deg, #f7d7f9, #8f63c8, #3c287f, #a492d1, #f7d7f9); 
   background-size: 200% 200%;
+  /* Applique une animation pour créer un effet de vent sur le dégradé */
   animation: windEffect 10s linear infinite; 
   overflow-x: hidden;
 }
 
+/* Animation pour l'effet de vent */
 @keyframes windEffect {
   0% {
     background-position: 0 0;
@@ -22,9 +26,7 @@ body {
   }
 }
 
-
-
-
+/* Styles pour la vidéo d'arrière-plan */
 .video-bg {
   position: fixed;
   top: 35%;
@@ -35,11 +37,9 @@ body {
   transform: translate(-50%, -50%);
   z-index: -1;
   opacity: 0.8;
-  
 }
 
-
-
+/* Styles pour le conteneur principal */
 .container-first {
   position: absolute;
   top: 30%;
@@ -47,7 +47,6 @@ body {
   text-align: left; 
   margin-top: 200px;
   margin-left: 10px;
-  
 }
 
 h1 {
@@ -61,6 +60,7 @@ h1 span {
   position: relative;
 }
 
+/* Styles pour les boutons */
 .container-btns {
   position: relative;
   top: 50px;
@@ -77,6 +77,7 @@ h1 span {
   cursor: pointer;
 }
 
+/* Styles pour les différents boutons (peut être utilisé pour styliser plusieurs boutons) */
 .btn-first:nth-child(1) {
   margin-right: 30px;
 }
@@ -87,6 +88,7 @@ h1 span {
   color: #333;
 }
 
+/* Styles pour les lignes décoratives */
 .lignes {
   position: absolute;
   top: 6%;
@@ -109,6 +111,7 @@ h1 span {
   top: 20px;
 }
 
+/* Styles pour le logo */
 .logo {
   position: absolute;
   right: 2.9%;
@@ -118,6 +121,7 @@ h1 span {
   cursor: pointer;
 }
 
+/* Styles pour les icônes des médias sociaux */
 .medias {
   list-style-type: none;
   position: absolute;
@@ -130,6 +134,7 @@ h1 span {
   flex-direction: column;
 }
 
+/* Styles pour les bulles des médias sociaux */
 .bulle {
   width: 60px;
   height: 60px;
@@ -144,6 +149,7 @@ h1 span {
   display: flex;
 }
 
+/* Styles pour les logos des médias sociaux */
 .logo-medias {
   width: 40px;
   height: 40px;

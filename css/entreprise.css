@@ -17,7 +17,7 @@ body {
   margin-bottom: 50px;
 }
 
-/* Pour les liens dans la nav bar en mode sombre */
+/* Styles pour les liens dans la barre de navigation en mode sombre */
 .dark-mode .navbar-nav .nav-link {
   color: #fff;
 }
@@ -28,7 +28,7 @@ body {
   color: #fff;
 }
 
-
+/* Styles pour les liens dans la barre de navigation en mode clair */
 .navbar-light .navbar-nav .nav-link {
   color: #fff;
 }
@@ -84,12 +84,14 @@ body {
   margin-left: 30px;
 }
 
+/* Styles pour les éléments de liste dans les conteneurs */
 .company-text ul li {
   font-size: 18px;
   color: white;
   margin-bottom: 10px;
 }
 
+/* Styles pour les images dans les conteneurs */
 .company-image {
   flex: 0 0 30%;
   text-align: right;
@@ -106,6 +108,7 @@ body {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
+/* Styles pour le bouton "Direction blog" */
 .btn-direction-blog {
   display: inline-block;
   padding: 10px 20px;
@@ -117,6 +120,7 @@ body {
   margin-top: 20px;
 }
 
+/* Styles pour le bouton "Direction blog" au survol de la souris */
 .btn-direction-blog:hover {
   background-color: #222;
 }
@@ -134,7 +138,6 @@ body {
   color: white !important;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
 }
-
 
 footer {
   position: fixed;
@@ -181,7 +184,7 @@ body.dark-mode {
   background-color: #000 !important;
 }
 
-/* Styles pour le bouton */
+/* Styles pour le bouton "Mode sombre" */
 #dark-mode-toggle {
   position: absolute;
   top: 22px;
@@ -203,15 +206,16 @@ body.dark-mode {
   border-bottom: 1px solid #ffffff93;
 }
 
-.dark-mode .navbar-brand{
-  border-top: 1px solid#ffffff5d;
+/* Style pour la bordure supérieure de la navbar en mode sombre */
+.dark-mode .navbar-brand {
+  border-top: 1px solid #ffffff5d;
 }
 
 /* Styles pour le footer en mode sombre */
 .dark-mode footer {
   background-color: #000;
   color: #fff;
-  border-top: 1px solid#ffffff5d;
+  border-top: 1px solid #ffffff5d;
 }
 
 /* Styles pour le texte en mode sombre */
@@ -241,7 +245,7 @@ body.dark-mode {
   color: #fff;
 }
 
-/* Styles pour le bouton en mode sombre */
+/* Styles pour le bouton "Direction blog" en mode sombre */
 .dark-mode .btn-direction-blog {
   border: 1px solid #ffffff5d;
   color: #fff;
@@ -256,4 +260,3 @@ body.dark-mode {
   width: 60%;
   margin: 10px auto;
 }
-

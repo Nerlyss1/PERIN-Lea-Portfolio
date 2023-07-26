@@ -17,13 +17,8 @@ window.addEventListener('load', () => {
     .from(logo, 0.4, {transform: "scale(0)", ease: "power2.out"}, '-=2')
     .staggerFrom(medias, 1, {right: -200, ease: "power2.out"}, 0.3, '-=1');
 
-    
-    
-
     TL.play();
 })
-
-
 
   const darkModeToggle = document.getElementById('dark-mode-toggle');
   const body = document.body;

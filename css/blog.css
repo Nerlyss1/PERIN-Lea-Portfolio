@@ -6,46 +6,44 @@ body {
 }
 
 .container {
-  margin: 0 20px; 
+  margin: 0 20px;
 }
 
 .navbar {
   margin-bottom: 30px;
 }
 
-/* Pour les liens dans la nav bar en mode sombre */
+/* Pour les liens dans la barre de navigation en mode sombre */
 .dark-mode .navbar-nav .nav-link {
   color: #fff;
 }
 
-/* Styles pour la barre de navigation */
 .navbar .navbar-brand {
   font-size: 20px;
   color: #fff;
 }
 
-
 .navbar-light .navbar-nav .nav-link {
   color: #fff;
 }
-  
+
 h1 {
   text-transform: uppercase;
   font-size: 40px;
-  color: #000000 !important;   
+  color: #000000 !important;
   text-align: center;
   margin-top: 40px;
   margin-bottom: 100px;
 }
 
 img {
-  max-width: 100%; 
+  max-width: 100%;
   height: auto;
   display: block;
-  margin: 0 auto; 
+  margin: 0 auto;
   margin-bottom: 20px;
 }
-  
+
 .container-box {
   display: flex;
   flex-wrap: wrap;
@@ -53,7 +51,8 @@ img {
   margin-top: 30px;
   margin-bottom: 50px;
 }
-  
+
+/* Styles pour les articles de blog */
 .blog-post {
   flex: 0 0 calc(25% - 20px);
   margin: 10px;
@@ -66,6 +65,7 @@ img {
   flex-direction: column;
 }
 
+/* Styles pour le contenu des articles de blog */
 .blog-post-content {
   display: flex;
   flex-direction: column;
@@ -73,6 +73,7 @@ img {
   height: 100%;
 }
 
+/* Styles pour l'intérieur des articles de blog */
 .blog-post-inner {
   flex-grow: 1;
   display: flex;
@@ -102,188 +103,93 @@ img {
   flex-grow: 1;
 }
 
-  
-  .centered-content {
-    text-align: center;
-  }
+/* Styles pour les liens "Lire plus" */
+.btn-read-more {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 18px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
 
-  .blog-post h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.7); 
-    padding-bottom: 10px;
-    position: relative; 
-  }
-  
-  .blog-post h2::before {
-    content: "";
-    position: absolute;
-    bottom: -2px; 
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: rgba(0, 0, 0, 0.7); 
-    transform: scaleX(0); 
-    transform-origin: left;
-    transition: transform 0.3s ease-in-out; 
-  }
-  
-  .blog-post h2:hover::before {
-    transform: scaleX(1); 
-  }
-  
-  .blog-post p {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  
-  .btn-read-more {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #000;
-    text-decoration: none;
-    border-radius: 10px;
-    font-size: 18px;
-    border: 2px solid rgba(0, 0, 0, 0.1); 
-  }
-  
-  .btn-read-more:hover {
-    background-color: #222;
-    color: #fff;
-  }
+/* Styles au survol des liens "Lire plus" */
+.btn-read-more:hover {
+  background-color: #222;
+  color: #fff;
+}
 
- 
-
+/* Styles pour les boutons "Lire plus" en bas des articles */
 .btn-read-more-bottom {
   margin-top: auto;
 }
-  
-  
-  .navbar .navbar-brand {
-    font-size: 20px;
-  }
-  
-  .navbar.navbar {
-    padding: 20px 40px;
-    background: linear-gradient(90deg, #f7d7f9, #8f63c8, #a492d1, #3c287f);
-    background-size: 200% 200%;
-    font-size: 20px;
-    margin-bottom: 65px;
-    color: white !important;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
-  }
-  
-  
-  footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    background-color: #ffffff;
-    align-items: center;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  .container p {
-    margin: 0;
-    font-size: 16px;
-    color: #000000;
-    text-align: center;
-  }
-  
-  /* Effet de surbrillance pour les liens actifs */
-  .navbar-nav .nav-item .nav-link.active,
-  .navbar-brand:hover {
-    background-color: #ffffff;
-    color: #000000;
-    border-radius: 5px;
-    transition: background-color 0.3s, font-weight 0.3s; 
-    font-weight: normal; 
-  }
-  
-  /* Effet de surbrillance au survol de la souris */
-  .navbar-nav .nav-item .nav-link:hover,
-  .navbar-nav .nav-item .nav-link.active:hover,
-  .navbar-brand:hover {
-    background-color: rgba(0, 0, 0, 0.1); 
-    border-radius: px;
-    font-weight: bold;
-    border-radius: 10px;
-  }
 
-  
-  /* Styles pour le fond en mode sombre */
-body.dark-mode {
-  background-color: #000 !important;
+.navbar .navbar-brand {
+  font-size: 20px;
 }
 
-/* Styles pour le trait dans blog-post en mode sombre */
-.dark-mode .blog-post h2::before,
-.dark-mode .person-container::after {
-  background-color: #fff !important;
+.navbar.navbar {
+  padding: 20px 40px;
+  background: linear-gradient(90deg, #f7d7f9, #8f63c8, #a492d1, #3c287f);
+  background-size: 200% 200%;
+  font-size: 20px;
+  margin-bottom: 65px;
+  color: white !important;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
 }
 
-/* Styles pour le bouton */
-#dark-mode-toggle {
-  position: absolute;
-  top: 22px;
-  right: 20px;
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  align-items: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.container p {
+  margin: 0;
+  font-size: 16px;
+  color: #000000;
+  text-align: center;
+}
+
+/* Effet de surbrillance pour les liens actifs */
+.navbar-nav .nav-item .nav-link.active,
+.navbar-brand:hover {
+  background-color: #ffffff;
+  color: #000000;
   border-radius: 5px;
-  background-color: #000;
-  color: #fff;
-  border-color:#ffffffe1;
-  padding: 5px 10px;
+  transition: background-color 0.3s, font-weight 0.3s;
+  font-weight: normal;
 }
 
-/* Style pour le texte du bouton en mode sombre */
-.dark-mode #dark-mode-toggle {
-  color: #fff;
+/* Effet de surbrillance au survol de la souris */
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .nav-link.active:hover,
+.navbar-brand:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-weight: bold;
 }
 
-/* Style pour la bordure inférieure de la navbar en mode sombre */
-.dark-mode .navbar.navbar {
-  border-bottom: 1px solid #ffffff93;
+/* Styles pour le fond en mode sombre */
+body.dark-mode {
+  background-color: #000!important;
 }
 
-/* Styles pour le footer en mode sombre */
-.dark-mode footer {
-  background-color: #000;
-  color: #fff;
-  border-top: 1px solid #ffffff5d;
-}
-
-/* Styles pour le texte en mode sombre */
-.dark-mode h1,
-.dark-mode h2,
-.dark-mode p,
-.dark-mode a,
-.dark-mode li {
-  color: #fff !important;
-}
-
-/* Styles pour les containers en mode sombre */
-.dark-mode .blog-post {
-  background-color: #ffffff23;
-  color: #fff!important;
-  border: 1px solid #ffffff5d!important;
-}
-
-/* Style pour le trait en mode sombre */
-.dark-mode .blog-post h2::before,
-.dark-mode .person-container::after { /* Ajout de ::after pour cibler le trait dans les person-container */
-  background-color: #fff !important;
-}
-
-/* Styles pour le texte en mode normal */
-.navbar-nav .nav-link {
+/* Styles pour les titres de niveau 2 en mode sombre */
+.dark-mode .blog-post h2 {
   color: #fff;
 }
 
-/* Styles pour les boutons en mode sombre */
+/* Styles pour les liens "Lire plus" en mode sombre */
 .dark-mode .btn-read-more {
   background-color: #000;
   border: 1px solid #ffffff5d;
@@ -293,11 +199,13 @@ body.dark-mode {
   transition: color 0.3s, background-color 0.3s;
 }
 
+/* Styles pour les liens "Lire plus" en mode sombre au survol de la souris */
 .dark-mode .btn-read-more:hover {
   color: #000 !important;
   background-color: #fff;
 }
 
+/* Styles pour l'animation des liens "Lire plus" en mode sombre */
 .dark-mode .btn-read-more:before {
   content: "";
   position: absolute;
@@ -309,9 +217,7 @@ body.dark-mode {
   transition: left 0.3s;
 }
 
+/* Styles pour l'animation des liens "Lire plus" en mode sombre au survol de la souris */
 .dark-mode .btn-read-more:hover:before {
   left: 0;
 }
-
-
-
