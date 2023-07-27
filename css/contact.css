@@ -147,20 +147,22 @@ body.dark-mode form label {
   color: #fff;
 }
 
-#dark-mode-toggle {
-  position: absolute;
-  top: 5%;
-  right: 30px;
-  transform: translateY(-50%);
-  z-index: 1;
-  border-radius: 5px;
-  background-color: #000;
-  color: #fff;
-  padding: 8px 15px; 
-  border: 1px solid #b091d8;
-  margin-top:20px !important;
-  margin-bottom: 20px !important;
-  font-size: 17px;
+/* Styles pour le conteneur d'icône */
+.mode-icon {
+  display: flex;
+  align-items: center; 
+  justify-content: flex-end !important;
+}
+
+/* Styles pour les icônes de lune et de soleil */
+.mode-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Style par défaut pour cacher l'icône du soleil */
+.dark-mode .mode-icon #sunIcon {
+  display: none;
 }
 
 /* Styles pour les titres en mode sombre */
@@ -177,7 +179,6 @@ body.dark-mode form .groupe textarea {
   color: #fff !important;
   border-color: #b091d8;
 }
-
 
 /* Styles pour le bouton "Envoyez votre message" en mode sombre */
 body.dark-mode form .pied-formulaire button {

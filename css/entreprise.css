@@ -33,14 +33,13 @@ body {
   color: #fff;
 }
 
-
 .page-title {
   text-transform: uppercase;
   font-size: 40px;
   color: #000000 !important;   
   text-align: center;
   margin-top: -30px;
-  margin-bottom: 30px;
+  margin-bottom: px;
 }
 
 .company-container {
@@ -163,7 +162,7 @@ footer {
 .navbar-nav .nav-item .nav-link.active,
 .navbar-brand:hover {
   background-color: #ffffff;
-  color: #000000;
+  color: #ffffff !important;
   border-radius: 5px;
   transition: background-color 0.3s, font-weight 0.3s; 
   font-weight: normal; 
@@ -184,17 +183,25 @@ body.dark-mode {
   background-color: #000 !important;
 }
 
-/* Styles pour le bouton "Mode sombre" */
-#dark-mode-toggle {
-  position: absolute;
-  top: 22px;
-  right: 20px;
-  border-radius: 5px;
-  background-color: #000;
-  color: #fff;
-  border-color: #ffffffe1;
-  padding: 5px 10px;
+/* Supprimez le fond et les marges du conteneur d'icône */
+.mode-icon {
+  background: none;
+  margin: 0;
 }
+
+/* Styles pour les icônes de lune et de soleil */
+.mode-icon img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  background-color: transparent; /* Ajout de cette propriété pour supprimer le fond blanc */
+}
+
+/* Style par défaut pour cacher l'icône du soleil */
+.dark-mode .mode-icon #sunIcon {
+  display: none;
+}
+
 
 /* Style pour le texte du bouton en mode sombre */
 .dark-mode #dark-mode-toggle {
@@ -273,7 +280,7 @@ body.dark-mode {
     width: 130px;
     height: 130px;
     margin-top: -160px;
-    margin-left: 2px;
+    margin-left: 250px;
   }
 
  /* le bouton "mode sombre" */

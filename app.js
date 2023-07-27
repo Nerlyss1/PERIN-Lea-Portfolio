@@ -22,33 +22,17 @@ window.addEventListener('load', () => {
 
   const darkModeToggle = document.getElementById('dark-mode-toggle');
   const body = document.body;
-
-  // Fonction pour activer/désactiver le mode sombre
   function toggleDarkMode() {
-    if (body.classList.contains('dark-mode')) {
-      body.classList.remove('dark-mode');
-      localStorage.setItem('dark-mode', 'disabled');
-      darkModeToggle.querySelector('.text-dark-mode').style.display = 'inline';
-      darkModeToggle.querySelector('.text-light-mode').style.display = 'none';
+    const modeIcon = document.getElementById("modeIcon");
+    const sunIcon = document.getElementById("sunIcon");
+    const moonIcon = document.getElementById("moonIcon");
+    
+    document.body.classList.toggle("dark-mode");
+    if (document.body.classList.contains("dark-mode")) {
+      moonIcon.style.display = "none";
+      sunIcon.style.display = "inline-block";
     } else {
-      body.classList.add('dark-mode');
-      localStorage.setItem('dark-mode', 'enabled');
-      darkModeToggle.querySelector('.text-dark-mode').style.display = 'none';
-      darkModeToggle.querySelector('.text-light-mode').style.display = 'inline';
+      sunIcon.style.display = "none";
+      moonIcon.style.display = "inline-block";
     }
-  }
-
-  // Mettre à jour le texte du bouton en fonction de l'état du mode sombre lors du chargement de la page
-  if (localStorage.getItem('dark-mode') === 'enabled') {
-    body.classList.add('dark-mode');
-    darkModeToggle.querySelector('.text-dark-mode').style.display = 'none';
-    darkModeToggle.querySelector('.text-light-mode').style.display = 'inline';
-  } else {
-    body.classList.remove('dark-mode');
-    darkModeToggle.querySelector('.text-dark-mode').style.display = 'inline';
-    darkModeToggle.querySelector('.text-light-mode').style.display = 'none';
-  }
-
-  // Écouter le clic sur le bouton pour activer/désactiver le mode sombre
-  darkModeToggle.addEventListener('click', toggleDarkMode);
-
+  } 

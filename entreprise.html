@@ -27,9 +27,11 @@
           <li class="nav-item">
             <a class="nav-link" href="mesprojets.html">Projets</a>
           </li>
-          <button id="dark-mode-toggle">
-            <span class="text-dark-mode">Mode sombre</span>
-            <span class="text-light-mode">Mode clair</span>
+          <button class="dark-mode-btn" onclick="toggleDarkMode()">
+            <span class="mode-icon" id="modeIcon">
+              <img src="img/moon.png" alt="Moon" id="moonIcon">
+              <img src="img/sun.png" alt="Sun" id="sunIcon" style="display: none;">
+            </span>
           </button>    
         </ul>
       </div>
