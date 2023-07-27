@@ -59,3 +59,7 @@ Pour déployer votre site portfolio avec GitHub, suivez ces étapes simples :
 Veuillez noter que l'aperçu ci-dessus est une image statique et ne reflète pas l'interactivité et les fonctionnalités du site portfolio complet.
 
 Ceci conclut le README pour mon site portfolio informatique. J'espère que cela vous aidera à présenter vos compétences et réalisations de manière professionnelle. Si vous avez des questions ou des suggestions d'amélioration, n'hésitez pas à me contacter. Bonne présentation de votre portfolio !
+
+## Auteur
+
+Ce projet a été développé par [Nerlyss1](https://github.com/Nerlyss1).
