@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Rétrospective et Projets Futurs : Mon Parcours d'Apprentissage et d'Amélioration</title>
+  <link rel="stylesheet" type="text/css" href="article.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <button class="btn-back" onclick="goBack()">Retour</button>
+  <div class="container">
+        <img src="imgb/last.png" alt="Illustration de l'article">
+    <h1>Rétrospective et Projets Futurs : Mon Parcours d'Apprentissage et d'Amélioration</h1>
+    <p>
+        <em>Introduction</em>
+        <br /> <br />
+      
+        Dans cet article, je souhaite partager avec vous un aperçu de mon parcours jusqu'à présent, ainsi que mes projets futurs. J'ai pris le temps de créer un site/blog personnel où je peux présenter mes réalisations et mes progrès, et je suis ravi de vous en dire plus à ce sujet.
+
+        <br /> <br />
+
+        <em>Un site/blog complet et professionnel </em>
+        <br /> <br />
+
+        Vous pouvez y trouver une présentation de qui je suis, mes projets passés et en cours, ainsi qu'une page de contact pour faciliter la communication. De plus, j'ai ajouté une fonctionnalité de mode sombre pour améliorer l'expérience de lecture et m'assurer que le site est accessible à tous, quelle que soit la préférence de thème.
+        <br /> <br /> 
+
+        <em>Une refonte complète de mon GitHub</em>
+        <br /> <br />
+
+        J'ai également entrepris une refonte complète de mon GitHub. J'ai pris le temps de créer un profil propre et professionnel, mettant en valeur mes compétences et mes projets de manière organisée. Actuellement, je suis en train de travailler sur l'ajout de mes projets avec des fichiers README bien documentés, afin que les visiteurs puissent facilement comprendre l'objectif, le fonctionnement de chaque projet et pourquoi pas les réutiliser.
+        <br /> <br />
+
+        <em>Une vision multilingue</em>
+        <br /> <br />
+
+        Dans le but d'atteindre un public plus large et de rendre mon contenu accessible à des personnes de différentes régions, je prévois d'ajouter une fonctionnalité de traduction sur mon site/blog. Ainsi, les visiteurs auront la possibilité de passer du français à l'anglais (et vice versa) d'un simple clic, facilitant ainsi leur compréhension et leur expérience de navigation.
+        <br />  <br />
+
+        <em>Une quête d'amélioration continue</em>
+        <br /> <br />
+
+        Je souhaite continuer d'améliorer mon contenu notamment ce site et aussi mes compétences techniques ou encore mon niveau d'anglais afin de communiquer plus efficacement avec une audience internationale et m'ouvrir à de nouvelles perspectives. En parallèle, je vais continuer à travailler sur des projets personnels et professionnels, en mettant l'accent sur la régularité des contributions sur mon GitHub.
+        <br /> <br />
+
+        <em>La documentation, clé de l'apprentissage</em>
+        <br /> <br />
+        
+        Je suis consciente de l'importance de la documentation, en particulier dans le domaine de l'infrastructure réseau. C'est pourquoi je vais m'efforcer de fournir des documentations détaillées sur certaines parties liées à l'infrastructure réseau. Cela permettra non seulement d'améliorer mon propre apprentissage, mais aussi d'aider les autres professionnels qui peuvent rencontrer des défis similaires.
+        <br /> <br />
+
+        <em>Conclusion</em>
+        <br /> <br />
+        
+        En prenant du recul, j'ai pu constater les progrès réalisés jusqu'à présent, notamment la mise en place de mon site/blog et l'amélioration de mon profil GitHub. Pour l'avenir, je compte continuer à développer des projets stimulants, approfondir mes compétences techniques et maintenir une présence active sur GitHub. Mon objectif est de poursuivre ma croissance professionnelle en explorant de nouvelles opportunités dans le domaine technologique.
+
+
+    <div class="article-footer">
+        <p class="article-date">Date de publication :  1 août 2023</p>
+        <p class="article-signature">Par Perin Léa</p>
+      </div>
+  </div>
+ 
+  <footer>
+    <div class="container-p">
+      <p>© 2023 Perin Léa. Tous droits réservés.</p>
+    </div>
+  </footer>
+  
+
+  <script>
+    function goBack() {
+        const redirectURL = new URL('../blog.html', window.location.href);
+      window.location.href = redirectURL.href;
+    }
+  </script>
+    <script>
+      function goBack() {
+        const redirectURL = new URL('../blog.html', window.location.href);
+        window.location.href = redirectURL.href;
+      }
+  
+      const darkModeToggle = document.getElementById('dark-mode-toggle');
+      const body = document.body;
+  
+      // Fonction pour activer/désactiver le mode sombre
+      function toggleDarkMode() {
+        if (body.classList.contains('dark-mode')) {
+          body.classList.remove('dark-mode');
+          localStorage.setItem('dark-mode', 'disabled');
+          darkModeToggle.querySelector('.text-dark-mode').style.display = 'inline';
+          darkModeToggle.querySelector('.text-light-mode').style.display = 'none';
+        } else {
+          body.classList.add('dark-mode');
+          localStorage.setItem('dark-mode', 'enabled');
+          darkModeToggle.querySelector('.text-dark-mode').style.display = 'none';
+          darkModeToggle.querySelector('.text-light-mode').style.display = 'inline';
+        }
+      }
+  
+      // Mettre à jour le texte du bouton en fonction de l'état du mode sombre lors du chargement de la page
+      if (localStorage.getItem('dark-mode') === 'enabled') {
+        body.classList.add('dark-mode');
+        darkModeToggle.querySelector('.text-dark-mode').style.display = 'none';
+        darkModeToggle.querySelector('.text-light-mode').style.display = 'inline';
+      } else {
+        body.classList.remove('dark-mode');
+        darkModeToggle.querySelector('.text-dark-mode').style.display = 'inline';
+        darkModeToggle.querySelector('.text-light-mode').style.display = 'none';
+      }
+  
+      // Clic sur le bouton pour activer/désactiver le mode sombre
+      darkModeToggle.addEventListener('click', toggleDarkMode);
+    </script>
+  </body>
+</html>

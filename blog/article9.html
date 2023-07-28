@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Réparation et Mise à jour des Boitiers INTEOS</title>
+  <link rel="stylesheet" type="text/css" href="article.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <button class="btn-back" onclick="goBack()">Retour</button>
+  <div class="container">
+        <img src="imgb/inteos2.jpg" alt="Illustration de l'article">
+    <h1>Réparation et Mise à jour des Boitiers INTEOS</h1>
+    <p>
+        <em>Introduction</em>
+        <br /> <br />
+      
+        Dans le secteur de l'informatique industrielle, les boitiers INTEOS jouent un rôle crucial en permettant de gérer efficacement les processus de métiers tels que le tricotage. Ces boitiers sont utilisés pour stocker des codes spécifiques, intervenant en cas de problèmes de non qualité ou d'incidents sur la ligne de production. Cependant, comme tout dispositif technologique, ils peuvent rencontrer des problèmes et nécessiter des réparations et des mises à jour régulières pour assurer leur bon fonctionnement. Dans cet article, nous allons examiner la réparation et la mise à jour des boitiers INTEOS, ainsi que les méthodes employées pour se faire.
+
+        <br /> <br />
+
+        <em>L'importance des boitiers INTEOS dans le processus de tricotage</em>
+        <br /> <br />
+
+        Les boitiers INTEOS constituent une partie essentielle du processus de tricotage industriel, car ils stockent des codes permettant de constituer de la donnée sur les soucis rencontrés avec les métiers et ainsi de se pencher sur ces soucis pour y trouver des solutions.
+        <br /> <br />
+
+        <em>Nécessité des mises à jour pour corriger les bugs</em>
+        <br /> <br />
+
+        Lors de la phase de maintenance, il est crucial d'effectuer régulièrement des mises à jour sur les boitiers INTEOS pour garantir leur bon fonctionnement et corriger les bugs identifiés. Les mises à jour peuvent également apporter de nouvelles fonctionnalités et améliorations, renforçant ainsi les performances globales du système.
+        <br /> <br />
+
+        <em>Procédures de réparation des boitiers INTEOS</em>
+        <br /> <br />
+
+        Après des recherches et de la communication avec le support INTEOS, le service informatique à trouver que le soucis venait de la version des boitiers. Nous avons donc mise à jour les différents boitiers.
+        <br />  <br />
+
+        <em>Réaffectation des adresses IP perdues</em>
+        <br />  <br />
+        Pour régler le soucis nous avons commencé par réaffecter les bonnes addresses ip du réseau à chaque boitier ayant perdu son adresse d'origine. Nous avons ensuite envoyé un LXI sur la machine qui incluaient la rom de la mise à jour.
+
+        <em>Conclusion</em>
+        <br />  <br />
+        Les boitiers INTEOS jouent un rôle crucial dans l'amélioration de la qualité et de l'efficacité du processus de tricotage industriel. Cependant, pour garantir leur bon fonctionnement, des réparations régulières et des mises à jour sont nécessaires pour corriger les bugs et les problèmes de configuration. Les techniciens en informatique jouent un rôle essentiel dans la maintenance de ces boitiers, assurant ainsi une production fluide et de haute qualité.       
+      </p>
+      
+    <div class="article-footer">
+        <p class="article-date">Date de publication : 28 juillet 2023</p>
+        <p class="article-signature">Par Perin Léa</p>
+      </div>
+  </div>
+ 
+
+  <footer>
+    <div class="container-p">
+      <p>© 2023 Perin Léa. Tous droits réservés.</p>
+    </div>
+  </footer>
+  
+
+  <script>
+    function goBack() {
+        const redirectURL = new URL('../blog.html', window.location.href);
+      window.location.href = redirectURL.href;
+    }
+  </script>
+    <script>
+      function goBack() {
+        const redirectURL = new URL('../blog.html', window.location.href);
+        window.location.href = redirectURL.href;
+      }
+  
+      const darkModeToggle = document.getElementById('dark-mode-toggle');
+      const body = document.body;
+  
+      // Fonction pour activer/désactiver le mode sombre
+      function toggleDarkMode() {
+        if (body.classList.contains('dark-mode')) {
+          body.classList.remove('dark-mode');
+          localStorage.setItem('dark-mode', 'disabled');
+          darkModeToggle.querySelector('.text-dark-mode').style.display = 'inline';
+          darkModeToggle.querySelector('.text-light-mode').style.display = 'none';
+        } else {
+          body.classList.add('dark-mode');
+          localStorage.setItem('dark-mode', 'enabled');
+          darkModeToggle.querySelector('.text-dark-mode').style.display = 'none';
+          darkModeToggle.querySelector('.text-light-mode').style.display = 'inline';
+        }
+      }
+  
+      // Mettre à jour le texte du bouton en fonction de l'état du mode sombre lors du chargement de la page
+      if (localStorage.getItem('dark-mode') === 'enabled') {
+        body.classList.add('dark-mode');
+        darkModeToggle.querySelector('.text-dark-mode').style.display = 'none';
+        darkModeToggle.querySelector('.text-light-mode').style.display = 'inline';
+      } else {
+        body.classList.remove('dark-mode');
+        darkModeToggle.querySelector('.text-dark-mode').style.display = 'inline';
+        darkModeToggle.querySelector('.text-light-mode').style.display = 'none';
+      }
+  
+      // Clic sur le bouton pour activer/désactiver le mode sombre
+      darkModeToggle.addEventListener('click', toggleDarkMode);
+    </script>
+  </body>
+</html>

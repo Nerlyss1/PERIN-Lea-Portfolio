@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>L'Innovation dans le Secteur Textile</title>
+  <link rel="stylesheet" type="text/css" href="article.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <button class="btn-back" onclick="goBack()">Retour</button>
+  <div class="container">
+        <img src="imgb/machine.jfif" alt="Illustration de l'article">
+    <h1>L'Innovation dans le Secteur Textile</h1>
+    <p>
+        <em>Introduction</em>
+        <br /> <br />
+      
+        Le secteur textile est en constante recherche de nouvelles technologies pour améliorer la qualité et l'efficacité de la production. L'intégration de machines dotées de multiples caméras pour détecter les défauts sur le tissu est une innovation majeure qui révolutionne cette industrie. Dans cet article, nous explorerons comment cette technologie d'avant-garde permet une détection précise et rapide des défauts de tissu, contribuant ainsi à améliorer la qualité des textiles produits et à optimiser les processus de fabrication. Il y en a notamment une qui vient d'être installée à la Lainière de Picardie pour être tester car avant cela se sont des personnes qui vérifient eux même.
+
+        <br /> <br />
+
+        <em>Le Fonctionnement de Machines à Caméras Multiples</em>
+        <br /> <br />
+
+        - Amélioration de la Qualité du Produit: En permettant une détection précoce des défauts, les fabricants peuvent éliminer les produits défectueux dès le début du processus de fabrication, réduisant ainsi les déchets et les coûts associés.
+        <br /> 
+        - Optimisation de la Productivité: La détection automatisée des défauts permet d'accélérer le processus d'inspection, augmentant ainsi la vitesse de production sans compromettre la qualité.
+        <br /> 
+        - Réduction des Coûts: En minimisant les déchets et les retouches, les fabricants peuvent réduire les coûts de production et améliorer leur rentabilité.
+        <br /> 
+        - Personnalisation et Flexibilité: Les machines à caméras multiples peuvent être configurées pour détecter différents types de défauts, offrant ainsi une solution adaptable aux besoins spécifiques de chaque fabricant.
+        <br /> <br /> 
+
+        <em>A Impact sur l'Industrie Textile</em>
+        <br /> <br />
+
+        Cette technologie réduit les risques de produits défectueux sur le marché, améliore la satisfaction du client et renforce la réputation de l'entreprise. En outre, elle permet aux fabricants d'adopter une approche proactive pour assurer la qualité tout au long du processus de production, contribuant ainsi à la compétitivité de l'industrie textile sur le marché mondial.
+        <br /> <br />
+
+        <em>Conclusion</em>
+        <br />  <br />
+
+        L'intégration de ces  machines représente une avancée technologique majeure dans le secteur textile. Cette innovation permet une détection rapide et précise des défauts, améliorant ainsi la qualité du produit final et optimisant les processus de fabrication. En adoptant cette technologie de pointe, les fabricants textiles sont en mesure d'améliorer leur efficacité, de réduire les coûts de production et de renforcer leur position sur le marché mondial. L'avenir de l'industrie textile est résolument marqué par l'innovation, et l'intégration de machines à caméras multiples en est une illustration concrète de la transformation numérique qui façonne cette industrie en constante évolution.
+
+       
+       
+       
+
+
+    </p>
+      
+    <div class="article-footer">
+        <p class="article-date">Date de publication : 30 juillet 2023</p>
+        <p class="article-signature">Par Perin Léa</p>
+      </div>
+  </div>
+ 
+
+  <footer>
+    <div class="container-p">
+      <p>© 2023 Perin Léa. Tous droits réservés.</p>
+    </div>
+  </footer>
+  
+
+  <script>
+    function goBack() {
+        const redirectURL = new URL('../blog.html', window.location.href);
+      window.location.href = redirectURL.href;
+    }
+  </script>
+    <script>
+      function goBack() {
+        const redirectURL = new URL('../blog.html', window.location.href);
+        window.location.href = redirectURL.href;
+      }
+  
+      const darkModeToggle = document.getElementById('dark-mode-toggle');
+      const body = document.body;
+  
+      // Fonction pour activer/désactiver le mode sombre
+      function toggleDarkMode() {
+        if (body.classList.contains('dark-mode')) {
+          body.classList.remove('dark-mode');
+          localStorage.setItem('dark-mode', 'disabled');
+          darkModeToggle.querySelector('.text-dark-mode').style.display = 'inline';
+          darkModeToggle.querySelector('.text-light-mode').style.display = 'none';
+        } else {
+          body.classList.add('dark-mode');
+          localStorage.setItem('dark-mode', 'enabled');
+          darkModeToggle.querySelector('.text-dark-mode').style.display = 'none';
+          darkModeToggle.querySelector('.text-light-mode').style.display = 'inline';
+        }
+      }
+  
+      // Mettre à jour le texte du bouton en fonction de l'état du mode sombre lors du chargement de la page
+      if (localStorage.getItem('dark-mode') === 'enabled') {
+        body.classList.add('dark-mode');
+        darkModeToggle.querySelector('.text-dark-mode').style.display = 'none';
+        darkModeToggle.querySelector('.text-light-mode').style.display = 'inline';
+      } else {
+        body.classList.remove('dark-mode');
+        darkModeToggle.querySelector('.text-dark-mode').style.display = 'inline';
+        darkModeToggle.querySelector('.text-light-mode').style.display = 'none';
+      }
+  
+      // Clic sur le bouton pour activer/désactiver le mode sombre
+      darkModeToggle.addEventListener('click', toggleDarkMode);
+    </script>
+  </body>
+</html>

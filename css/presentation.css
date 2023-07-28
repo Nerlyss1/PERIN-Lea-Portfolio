@@ -333,7 +333,7 @@ body.dark-mode {
     }
 
     h1 {
-    font-size: 110px; 
+    font-size: 25px !important; 
     margin-bottom: 50px; 
     }
 
