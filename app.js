@@ -19,20 +19,41 @@ window.addEventListener('load', () => {
 
     TL.play();
 })
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+const body = document.body;
 
-  const darkModeToggle = document.getElementById('dark-mode-toggle');
-  const body = document.body;
-  function toggleDarkMode() {
-    const modeIcon = document.getElementById("modeIcon");
-    const sunIcon = document.getElementById("sunIcon");
-    const moonIcon = document.getElementById("moonIcon");
-    
-    document.body.classList.toggle("dark-mode");
-    if (document.body.classList.contains("dark-mode")) {
-      moonIcon.style.display = "none";
-      sunIcon.style.display = "inline-block";
-    } else {
-      sunIcon.style.display = "none";
-      moonIcon.style.display = "inline-block";
-    }
-  } 
+// Vérifie si le mode sombre est déjà activé dans le LocalStorage
+const isDarkMode = localStorage.getItem('darkMode') === 'true';
+if (isDarkMode) {
+  enableDarkMode();
+}
+
+function enableDarkMode() {
+  body.classList.add("dark-mode");
+  saveDarkModeToLocalStorage(true);
+}
+
+function disableDarkMode() {
+  body.classList.remove("dark-mode");
+  saveDarkModeToLocalStorage(false);
+}
+
+function saveDarkModeToLocalStorage(isDarkMode) {
+  localStorage.setItem('darkMode', isDarkMode);
+}
+
+function toggleDarkMode() {
+  const modeIcon = document.getElementById("modeIcon");
+  const sunIcon = document.getElementById("sunIcon");
+  const moonIcon = document.getElementById("moonIcon");
+
+  if (body.classList.contains("dark-mode")) {
+    disableDarkMode();
+    moonIcon.style.display = "inline-block";
+    sunIcon.style.display = "none";
+  } else {
+    enableDarkMode();
+    sunIcon.style.display = "inline-block";
+    moonIcon.style.display = "none";
+  }
+}
